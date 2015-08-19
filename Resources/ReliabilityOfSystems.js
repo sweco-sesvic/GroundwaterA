@@ -98,7 +98,7 @@ rows.push(resultHeaderRow);
 
 var resultRow1 = createTableViewRow('auto', 'transparent', 'absolute'); 
 var resultLbl1 = Titanium.UI.createLabel({
-	text: 'Probability of failure, components in series (%):',
+	text: 'Probability of failure, components in series (%) :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor,
 	width: 300,
@@ -110,7 +110,7 @@ rows.push(resultRow1);
 
 var resultRow2 = createTableViewRow('auto', 'transparent', 'absolute'); 
 var resultLbl2 = Titanium.UI.createLabel({
-	text: 'Probability of failure, components in parallell (%):',
+	text: 'Probability of failure, components in parallell (%) :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor,
 	width: 300,
@@ -122,7 +122,7 @@ rows.push(resultRow2);
 
 var resultRow3 = createTableViewRow('auto', 'transparent', 'absolute'); 
 var resultLbl3 = Titanium.UI.createLabel({
-	text: 'Probability of failure, one (1st) component (%):',
+	text: 'Probability of failure, one (1st) component (%) :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor,
 	width: 300,
@@ -177,9 +177,9 @@ if (isNaN(resultRounded3))
 	}
 else 
 	{
-		resultLbl1.text = 'The probability of failure, components in series (%) is : '+resultRounded1+'';
-		resultLbl2.text = 'The probability of failure, components in parallell (%) is : '+resultRounded2+'';
-		resultLbl3.text = 'The probability of failure, one (1st) component (%) is : '+resultRounded3+''; 
+		resultLbl1.text = 'Probability of failure, components in series (%) : '+resultRounded1+'';
+		resultLbl2.text = 'Probability of failure, components in parallell (%) : '+resultRounded2+'';
+		resultLbl3.text = 'Probability of failure, one (1st) component (%) : '+resultRounded3+''; 
 	}
 }
 win.addEventListener("click", function()

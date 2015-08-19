@@ -167,7 +167,7 @@ rows.push(resultHeaderRow);
 
 var resultRow1 = createTableViewRow('auto', 'transparent', 'absolute'); 
 var resultLbl1 = Titanium.UI.createLabel({
-	text: 'Calculated groundwater flow to the system (L/s):',
+	text: 'Calculated groundwater flow to the system (L/s) :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor,
 	width: 300,
@@ -179,7 +179,7 @@ rows.push(resultRow1);
 
 var resultRow2 = createTableViewRow('auto', 'transparent', 'absolute'); 
 var resultLbl2 = Titanium.UI.createLabel({
-	text: 'Calculated groundwater flow in the system (L/s):',
+	text: 'Calculated groundwater flow in the system (L/s) :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor,
 	width: 300,
@@ -191,7 +191,7 @@ rows.push(resultRow2);
 
 var resultRow3 = createTableViewRow('auto', 'transparent', 'absolute'); 
 var resultLbl3 = Titanium.UI.createLabel({
-	text: 'Estimated groundwater flow in the system (L/s):',
+	text: 'Estimated groundwater flow in the system (L/s) :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor,
 	width: 300,
@@ -255,9 +255,9 @@ if (isNaN(resultRounded3))
 	}
 else 
 	{
-		resultLbl1.text = 'The groundwater flow to the system is : '+resultRounded1+''; // .toUpperCase()+'';
-		resultLbl2.text = 'The groundwater flow in the system is : '+resultRounded2+''; //.toUpperCase()+'';
-		resultLbl3.text = 'The estimated groundwater flow in the system is : '+resultRounded3+''; //.toUpperCase()+'';
+		resultLbl1.text = 'Calculated groundwater flow to the system (L/s) : '+resultRounded1+''; // .toUpperCase()+'';
+		resultLbl2.text = 'Calculated groundwater flow in the system (L/s) : '+resultRounded2+''; //.toUpperCase()+'';
+		resultLbl3.text = 'Estimated groundwater flow in the system (L/s) : '+resultRounded3+''; //.toUpperCase()+'';
 	}
 }
 win.addEventListener("click", function()

@@ -144,7 +144,7 @@ rows.push(resultHeaderRow);
 
 var resultRow1 = createTableViewRow('auto', 'transparent', 'absolute'); 
 var resultLbl1 = Titanium.UI.createLabel({
-	text: 'Probability of correct selected value range (%):',
+	text: 'Probability of correct selected value range (%) :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor,
 	width: 300,
@@ -187,7 +187,7 @@ if (isNaN(resultRounded1))
 	}
 else 
 	{
-		resultLbl1.text = 'The probability of correct selected value range (%) is : '+resultRounded1+''; 
+		resultLbl1.text = 'Probability of correct selected value range (%) : '+resultRounded1+''; 
 	}
 }
 win.addEventListener("click", function()
