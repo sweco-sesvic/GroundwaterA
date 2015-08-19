@@ -1,0 +1,520 @@
+
+8/19/2015, 10:39:58 AM
+
+Operating System
+  Name                        = Mac OS X
+  Version                     = 10.10.5
+  Architecture                = 64bit
+  # CPUs                      = 8
+  Memory                      = 17179869184
+
+Node.js
+  Node.js Version             = 0.12.4
+  npm Version                 = 2.11.1
+
+Titanium CLI
+  CLI Version                 = 4.0.1
+
+Titanium SDK
+  SDK Version                 = 4.0.0.GA
+  SDK Path                    = /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA
+  Target Platform             = android
+
+Command
+  /usr/local/bin/node /Users/sandravictorin/.appcelerator/install/4.0.2/package/node_modules/appc-cli-titanium/node_modules/titanium/bin/titanium build --platform android --log-level trace --sdk 4.0.0.GA --project-dir /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid --target device --android-sdk /Users/sandravictorin/Library/android-sdk-macosx --device-id 4df1eed56bd38fb1 --no-colors --no-progress-bars --no-prompt --prompt-type socket-bundle --prompt-port 49248 --plugin-paths /Users/sandravictorin/.appcelerator/install/4.0.2/package/node_modules --config-file /var/folders/4w/3gsj03gj7jq06knly7h8wr240000gn/T/build-1439973593518.json --no-banner
+
+[DEBUG]  Detecting modules in /Users/sandravictorin/Library/Application Support/Titanium/modules
+[DEBUG]  Detected android module: com.appcelerator.apm 1.1.1 @ /Users/sandravictorin/Library/Application Support/Titanium/modules/android/com.appcelerator.apm/1.1.1
+[DEBUG]  Detected android module: facebook 4.0.3 @ /Users/sandravictorin/Library/Application Support/Titanium/modules/android/facebook/4.0.3
+[DEBUG]  Detected android module: ti.cloudpush 3.3.8 @ /Users/sandravictorin/Library/Application Support/Titanium/modules/android/ti.cloudpush/3.3.8
+[DEBUG]  Detected android module: ti.map 2.3.0 @ /Users/sandravictorin/Library/Application Support/Titanium/modules/android/ti.map/2.3.0
+[DEBUG]  Detected commonjs module: ti.cloud 3.2.8 @ /Users/sandravictorin/Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.8
+[DEBUG]  Detected iphone module: com.appcelerator.apm 1.1.1 @ /Users/sandravictorin/Library/Application Support/Titanium/modules/iphone/com.appcelerator.apm/1.1.1
+[DEBUG]  Detected iphone module: com.appcelerator.urlSession 1.1.1 @ /Users/sandravictorin/Library/Application Support/Titanium/modules/iphone/com.appcelerator.urlSession/1.1.1
+[DEBUG]  Detected iphone module: facebook 4.0.3 @ /Users/sandravictorin/Library/Application Support/Titanium/modules/iphone/facebook/4.0.3
+[DEBUG]  Detected iphone module: ti.coremotion 1.1.0 @ /Users/sandravictorin/Library/Application Support/Titanium/modules/iphone/ti.coremotion/1.1.0
+[DEBUG]  Detected iphone module: ti.map 2.2.2 @ /Users/sandravictorin/Library/Application Support/Titanium/modules/iphone/ti.map/2.2.2
+[DEBUG]  Detected iphone module: ti.touchid 1.1.0 @ /Users/sandravictorin/Library/Application Support/Titanium/modules/iphone/ti.touchid/1.1.0
+[DEBUG]  Looking for Titanium module id=ti.cloud version=latest platform=commonjs deploy-type=test
+[INFO]   Found Titanium module id=ti.cloud version=3.2.8 platform=commonjs deploy-type=test path=/Users/sandravictorin/Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.8
+[DEBUG]  No project level plugins to load
+[DEBUG]  Titanium SDK Android directory: /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android
+[INFO]   Deploy type: test
+[INFO]   Building for target: device
+[INFO]   Building for device: 4df1eed56bd38fb1
+[INFO]   Targeting Android SDK: 21
+[INFO]   Building for the following architectures: armeabi, armeabi-v7a, x86
+[INFO]   Signing with keystore: /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/dev_keystore (tidev)
+[DEBUG]  App ID: com.groundandroid
+[DEBUG]  Classname: Groundandroid
+[INFO]   Debugging disabled
+[INFO]   Profiler disabled
+[INFO]   Forcing rebuild: JavaScript files need to be re-encrypted
+[DEBUG]  Ignoring /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android
+[WARN]   Overwriting file /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/assets/Resources/appicon.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/appicon.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/assets/Resources/appicon.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/default.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable/background.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/images/res-long-land-hdpi/default.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable-long-land-hdpi/background.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/images/res-long-land-ldpi/default.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable-long-land-ldpi/background.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/images/res-long-port-hdpi/default.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable-long-port-hdpi/background.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/images/res-long-port-hdpi/info_24w.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable-long-port-hdpi/info_24w_b97f1c497f.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/images/res-long-port-hdpi/sweco.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable-long-port-hdpi/sweco_c183b0bd29.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/images/res-long-port-ldpi/default.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable-long-port-ldpi/background.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/images/res-long-port-ldpi/info_24w.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable-long-port-ldpi/info_24w_b97f1c497f.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/images/res-long-port-ldpi/sweco.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable-long-port-ldpi/sweco_c183b0bd29.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/images/res-notlong-land-hdpi/default.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable-notlong-land-hdpi/background.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/images/res-notlong-land-ldpi/default.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable-notlong-land-ldpi/background.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/images/res-notlong-land-mdpi/default.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable-notlong-land-mdpi/background.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/images/res-notlong-port-hdpi/default.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable-notlong-port-hdpi/background.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/images/res-notlong-port-ldpi/default.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable-notlong-port-ldpi/background.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/images/res-notlong-port-mdpi/default.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable-notlong-port-mdpi/background.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/images/res-notlong-port-mdpi/info_24w.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable-notlong-port-mdpi/info_24w_b97f1c497f.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/android/images/res-notlong-port-mdpi/sweco.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable-notlong-port-mdpi/sweco_c183b0bd29.png
+[DEBUG]  Symlinking /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/assets/Resources/appicon.png => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/drawable/appicon.png
+[INFO]   Processing JavaScript files
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/About.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/About.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/BasicSettlement.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/BasicSettlement.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/BayesianUpdating.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/BayesianUpdating.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/Capture.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/Capture.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/CharecteristicValue.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/CharecteristicValue.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/DetailDescription.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/DetailDescription.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/Drawdown.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/Drawdown.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/ExitToeGradient.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/ExitToeGradient.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/FlowVelocity.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/FlowVelocity.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/FlushingAquifer.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/FlushingAquifer.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/Groundwater.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/Groundwater.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/GroundwaterAge.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/GroundwaterAge.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/GroundwaterFlow.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/GroundwaterFlow.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/HarmonicMean.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/HarmonicMean.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/HydraulicConductivity.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/HydraulicConductivity.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/InflowToExcavation.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/InflowToExcavation.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/Influence.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/Influence.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/ReliabilityOfSystems.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/ReliabilityOfSystems.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/SettlementsFromDrawDown.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/SettlementsFromDrawDown.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/TimeOfTravel.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/TimeOfTravel.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/UniformDistribution.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/UniformDistribution.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/WaterHead.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/WaterHead.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/Resources/app.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/app.js
+[DEBUG]  Copying and minifying /Users/sandravictorin/Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.8/ti.cloud.js => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets/ti.cloud.js
+[INFO]   Encrypting JavaScript files: /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/titanium_prep.macos "com.groundandroid" "/Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/assets" "About.js" "BasicSettlement.js" "BayesianUpdating.js" "Capture.js" "CharecteristicValue.js" "DetailDescription.js" "Drawdown.js" "ExitToeGradient.js" "FlowVelocity.js" "FlushingAquifer.js" "Groundwater.js" "GroundwaterAge.js" "GroundwaterFlow.js" "HarmonicMean.js" "HydraulicConductivity.js" "InflowToExcavation.js" "Influence.js" "ReliabilityOfSystems.js" "SettlementsFromDrawDown.js" "TimeOfTravel.js" "UniformDistribution.js" "WaterHead.js" "app.js" "ti.cloud.js" "_app_props_.json"
+[DEBUG]  Adding library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/kroll-v8.jar
+[DEBUG]  Adding library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-analytics.jar
+[DEBUG]  Adding dependency library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/aps-analytics.jar
+[DEBUG]  Adding library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-android.jar
+[DEBUG]  Adding dependency library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/jaxen-1.1.1.jar
+[DEBUG]  Adding dependency library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/ti-commons-codec-1.3.jar
+[DEBUG]  Adding dependency library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/kroll-common.jar
+[DEBUG]  Adding dependency library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/titanium.jar
+[DEBUG]  Adding library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-app.jar
+[DEBUG]  Adding library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-ui.jar
+[DEBUG]  Adding dependency library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/nineoldandroids-appc-2.4.0.jar
+[DEBUG]  Adding library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-filesystem.jar
+[DEBUG]  Adding library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-media.jar
+[DEBUG]  Adding library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-appcompat.jar
+[DEBUG]  Adding dependency library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/android-support-v4.jar
+[DEBUG]  Adding dependency library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/android-support-v7-appcompat.jar
+[DEBUG]  Adding library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-locale.jar
+[DEBUG]  Adding library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-network.jar
+[DEBUG]  Adding dependency library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/thirdparty.jar
+[DEBUG]  Adding library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-xml.jar
+[DEBUG]  Adding library /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-platform.jar
+[DEBUG]  Unknown namespace ui.currentwindow, skipping
+[DEBUG]  Unknown namespace ui.iphone.tableviewstyle, skipping
+[DEBUG]  Unknown namespace ui.iphone, skipping
+[DEBUG]  Unknown namespace api, skipping
+[DEBUG]  Unknown namespace app.deploytype, skipping
+[DEBUG]  Unknown namespace ui.ios, skipping
+[INFO]   Writing /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/assets/app.json
+[INFO]   Extracting module resources: /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-analytics.res.zip
+[DEBUG]  Copying /var/folders/4w/3gsj03gj7jq06knly7h8wr240000gn/T/115719-18946-1cjkyzz/res/values/strings.xml => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-android.res.zip
+[DEBUG]  Merging /var/folders/4w/3gsj03gj7jq06knly7h8wr240000gn/T/115719-18946-8k50f7/res/values/strings.xml => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-app.res.zip
+[DEBUG]  Merging /var/folders/4w/3gsj03gj7jq06knly7h8wr240000gn/T/115719-18946-4fw84f/res/values/strings.xml => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-filesystem.res.zip
+[DEBUG]  Merging /var/folders/4w/3gsj03gj7jq06knly7h8wr240000gn/T/115719-18946-qmqpv6/res/values/strings.xml => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-media.res.zip
+[DEBUG]  Merging /var/folders/4w/3gsj03gj7jq06knly7h8wr240000gn/T/115719-18946-1yws53h/res/values/strings.xml => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-locale.res.zip
+[DEBUG]  Merging /var/folders/4w/3gsj03gj7jq06knly7h8wr240000gn/T/115719-18946-b0k443/res/values/strings.xml => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-network.res.zip
+[DEBUG]  Merging /var/folders/4w/3gsj03gj7jq06knly7h8wr240000gn/T/115719-18946-1wk226u/res/values/strings.xml => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-xml.res.zip
+[DEBUG]  Merging /var/folders/4w/3gsj03gj7jq06knly7h8wr240000gn/T/115719-18946-youubu/res/values/strings.xml => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/values/strings.xml
+[INFO]   Extracting module resources: /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-platform.res.zip
+[DEBUG]  Merging /var/folders/4w/3gsj03gj7jq06knly7h8wr240000gn/T/115719-18946-losfat/res/values/strings.xml => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/values/strings.xml
+[DEBUG]  Removing old file: /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/.classpath
+[DEBUG]  Removing old file: /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/.gitignore
+[DEBUG]  Removing old file: /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/.project
+[DEBUG]  Removing old file: /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/AndroidManifest.xml
+[DEBUG]  Removing old file: /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/default.properties
+[DEBUG]  Removing old file: /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/java-sources.txt
+[DEBUG]  Copying template /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/templates/build/AppInfo.java => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/gen/com/groundandroid/GroundandroidAppInfo.java
+[DEBUG]  Copying template /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/templates/build/App.java => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/gen/com/groundandroid/GroundandroidApplication.java
+[DEBUG]  Copying template /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/templates/build/Activity.java => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/gen/com/groundandroid/GroundandroidActivity.java
+[DEBUG]  Copying template /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/templates/build/project => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/.project
+[DEBUG]  Copying template /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/templates/build/default.properties => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/default.properties
+[DEBUG]  Copying /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/templates/build/gitignore => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/.gitignore
+[DEBUG]  Copying /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/templates/build/classpath => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/.classpath
+[INFO]   No aidl files to compile, continuing
+[INFO]   Generating i18n files
+[DEBUG]  Merging en strings => /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/values/strings.xml
+[INFO]   Generating /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res/values/theme.xml
+[INFO]   Packaging application: /Users/sandravictorin/Library/android-sdk-macosx/build-tools/23.0.0.2/aapt "package" "-f" "-m" "-J" "/Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/gen" "-M" "/Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/AndroidManifest.xml" "-A" "/Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/assets" "-S" "/Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/res" "-I" "/Users/sandravictorin/Library/android-sdk-macosx/platforms/android-21/android.jar" "-F" "/Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/app.ap_" "--auto-add-overlay" "--extra-packages" "ti.modules.titanium.ui:android.support.v7.appcompat" "-S" "/var/folders/4w/3gsj03gj7jq06knly7h8wr240000gn/T/115719-18946-sim0u9/res" "-S" "/var/folders/4w/3gsj03gj7jq06knly7h8wr240000gn/T/115719-18946-1uth7tg/res"
+[INFO]   Building Java source files: /Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/bin/javac "-J-Xmx256M" "-encoding" "utf8" "-bootclasspath" "/Users/sandravictorin/Library/android-sdk-macosx/platforms/android-21/android.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/kroll-v8.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-analytics.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/aps-analytics.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-android.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/jaxen-1.1.1.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/ti-commons-codec-1.3.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/kroll-common.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/titanium.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-app.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-ui.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/nineoldandroids-appc-2.4.0.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-filesystem.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-media.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-appcompat.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/android-support-v4.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/android-support-v7-appcompat.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-locale.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-network.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/thirdparty.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-xml.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-platform.jar:/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/lib/titanium-verify.jar:R.class:ApplicationStylesheet.class:AssetCryptImpl.class:GroundandroidActivity.class:GroundandroidAppInfo.class:GroundandroidApplication.class" "-d" "/Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/classes" "-proc:none" "-target" "1.6" "-source" "1.6" "@/Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/java-sources.txt"
+[INFO]   Running dexer: /Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/bin/java "-Xmx1024M" "-XX:-UseGCOverheadLimit" "-Djava.ext.dirs=/Users/sandravictorin/Library/android-sdk-macosx/platform-tools" "-jar" "/Users/sandravictorin/Library/android-sdk-macosx/build-tools/23.0.0.2/lib/dx.jar" "--dex" "--output=/Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/classes.dex" "/Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/classes" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/lib/titanium-verify.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/kroll-v8.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-analytics.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/aps-analytics.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-android.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/jaxen-1.1.1.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/ti-commons-codec-1.3.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/kroll-common.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/titanium.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-app.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-ui.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/nineoldandroids-appc-2.4.0.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-filesystem.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-media.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-appcompat.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/android-support-v4.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/android-support-v7-appcompat.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-locale.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-network.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/thirdparty.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-xml.jar" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-platform.jar"
+[INFO]   Creating unsigned apk
+[DEBUG]  Processing /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/app.ap_
+[DEBUG]  Deflating AndroidManifest.xml
+[DEBUG]  Adding assets/Resources/appicon.png
+[DEBUG]  Deflating assets/app.json
+[DEBUG]  Deflating assets/index.json
+[DEBUG]  Deflating res/anim/abc_fade_in.xml
+[DEBUG]  Deflating res/anim/abc_fade_out.xml
+[DEBUG]  Deflating res/anim/abc_slide_in_bottom.xml
+[DEBUG]  Deflating res/anim/abc_slide_in_top.xml
+[DEBUG]  Deflating res/anim/abc_slide_out_bottom.xml
+[DEBUG]  Deflating res/anim/abc_slide_out_top.xml
+[DEBUG]  Deflating res/color-v11/abc_background_cache_hint_selector_material_dark.xml
+[DEBUG]  Deflating res/color-v11/abc_background_cache_hint_selector_material_light.xml
+[DEBUG]  Deflating res/color/abc_background_cache_hint_selector_material_dark.xml
+[DEBUG]  Deflating res/color/abc_background_cache_hint_selector_material_light.xml
+[DEBUG]  Deflating res/color/abc_primary_text_disable_only_material_dark.xml
+[DEBUG]  Deflating res/color/abc_primary_text_disable_only_material_light.xml
+[DEBUG]  Deflating res/color/abc_primary_text_material_dark.xml
+[DEBUG]  Deflating res/color/abc_primary_text_material_light.xml
+[DEBUG]  Deflating res/color/abc_search_url_text.xml
+[DEBUG]  Deflating res/color/abc_secondary_text_material_dark.xml
+[DEBUG]  Deflating res/color/abc_secondary_text_material_light.xml
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ab_share_pack_holo_dark.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ab_share_pack_holo_light.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_clear_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_focused_holo.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-ldrtl-hdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-ldrtl-mdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-ldrtl-xhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-ldrtl-xxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-ldrtl-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-ldrtl-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-long-land-hdpi-v4/background.png
+[DEBUG]  Adding res/drawable-long-land-ldpi-v4/background.png
+[DEBUG]  Adding res/drawable-long-port-hdpi-v4/background.png
+[DEBUG]  Adding res/drawable-long-port-hdpi-v4/info_24w_b97f1c497f.png
+[DEBUG]  Adding res/drawable-long-port-hdpi-v4/sweco_c183b0bd29.png
+[DEBUG]  Adding res/drawable-long-port-ldpi-v4/background.png
+[DEBUG]  Adding res/drawable-long-port-ldpi-v4/info_24w_b97f1c497f.png
+[DEBUG]  Adding res/drawable-long-port-ldpi-v4/sweco_c183b0bd29.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ab_share_pack_holo_dark.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ab_share_pack_holo_light.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_clear_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_focused_holo.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-mdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-notlong-land-hdpi-v4/background.png
+[DEBUG]  Adding res/drawable-notlong-land-ldpi-v4/background.png
+[DEBUG]  Adding res/drawable-notlong-land-mdpi-v4/background.png
+[DEBUG]  Adding res/drawable-notlong-port-hdpi-v4/background.png
+[DEBUG]  Adding res/drawable-notlong-port-ldpi-v4/background.png
+[DEBUG]  Adding res/drawable-notlong-port-mdpi-v4/background.png
+[DEBUG]  Adding res/drawable-notlong-port-mdpi-v4/info_24w_b97f1c497f.png
+[DEBUG]  Adding res/drawable-notlong-port-mdpi-v4/sweco_c183b0bd29.png
+[DEBUG]  Deflating res/drawable-v11/abc_edit_text_material.xml
+[DEBUG]  Deflating res/drawable-v11/abc_textfield_search_material.xml
+[DEBUG]  Deflating res/drawable-v21/abc_cab_background_top_material.xml
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ab_share_pack_holo_dark.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ab_share_pack_holo_light.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_clear_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_menu_share_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_focused_holo.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_popup_background_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ab_share_pack_holo_dark.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ab_share_pack_holo_light.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_clear_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_divider_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_clear_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png
+[DEBUG]  Adding res/drawable-xxxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png
+[DEBUG]  Deflating res/drawable/abc_btn_check_material.xml
+[DEBUG]  Deflating res/drawable/abc_btn_radio_material.xml
+[DEBUG]  Deflating res/drawable/abc_cab_background_internal_bg.xml
+[DEBUG]  Deflating res/drawable/abc_cab_background_top_material.xml
+[DEBUG]  Deflating res/drawable/abc_edit_text_material.xml
+[DEBUG]  Deflating res/drawable/abc_item_background_holo_dark.xml
+[DEBUG]  Deflating res/drawable/abc_item_background_holo_light.xml
+[DEBUG]  Deflating res/drawable/abc_list_selector_background_transition_holo_dark.xml
+[DEBUG]  Deflating res/drawable/abc_list_selector_background_transition_holo_light.xml
+[DEBUG]  Deflating res/drawable/abc_list_selector_holo_dark.xml
+[DEBUG]  Deflating res/drawable/abc_list_selector_holo_light.xml
+[DEBUG]  Deflating res/drawable/abc_switch_thumb_material.xml
+[DEBUG]  Deflating res/drawable/abc_tab_indicator_material.xml
+[DEBUG]  Deflating res/drawable/abc_textfield_search_material.xml
+[DEBUG]  Adding res/drawable/appicon.png
+[DEBUG]  Adding res/drawable/background.png
+[DEBUG]  Adding res/drawable/btn_check_buttonless_on_64.png
+[DEBUG]  Adding res/drawable/btn_more_64.png
+[DEBUG]  Adding res/drawable/disclosure_64.png
+[DEBUG]  Deflating res/layout-v11/abc_screen_content_include.xml
+[DEBUG]  Deflating res/layout-v17/abc_search_view.xml
+[DEBUG]  Deflating res/layout-v21/abc_screen_toolbar.xml
+[DEBUG]  Deflating res/layout/abc_action_bar_title_item.xml
+[DEBUG]  Deflating res/layout/abc_action_bar_up_container.xml
+[DEBUG]  Deflating res/layout/abc_action_bar_view_list_nav_layout.xml
+[DEBUG]  Deflating res/layout/abc_action_menu_item_layout.xml
+[DEBUG]  Deflating res/layout/abc_action_menu_layout.xml
+[DEBUG]  Deflating res/layout/abc_action_mode_bar.xml
+[DEBUG]  Deflating res/layout/abc_action_mode_close_item_material.xml
+[DEBUG]  Deflating res/layout/abc_activity_chooser_view.xml
+[DEBUG]  Deflating res/layout/abc_activity_chooser_view_include.xml
+[DEBUG]  Deflating res/layout/abc_activity_chooser_view_list_item.xml
+[DEBUG]  Deflating res/layout/abc_expanded_menu_layout.xml
+[DEBUG]  Deflating res/layout/abc_list_menu_item_checkbox.xml
+[DEBUG]  Deflating res/layout/abc_list_menu_item_icon.xml
+[DEBUG]  Deflating res/layout/abc_list_menu_item_layout.xml
+[DEBUG]  Deflating res/layout/abc_list_menu_item_radio.xml
+[DEBUG]  Deflating res/layout/abc_popup_menu_item_layout.xml
+[DEBUG]  Deflating res/layout/abc_screen_content_include.xml
+[DEBUG]  Deflating res/layout/abc_screen_simple.xml
+[DEBUG]  Deflating res/layout/abc_screen_simple_overlay_action_mode.xml
+[DEBUG]  Deflating res/layout/abc_screen_toolbar.xml
+[DEBUG]  Deflating res/layout/abc_search_dropdown_item_icons_2line.xml
+[DEBUG]  Deflating res/layout/abc_search_view.xml
+[DEBUG]  Deflating res/layout/abc_simple_dropdown_hint.xml
+[DEBUG]  Deflating res/layout/support_simple_spinner_dropdown_item.xml
+[DEBUG]  Deflating res/layout/titanium_tabgroup.xml
+[DEBUG]  Deflating res/layout/titanium_ui_checkbox.xml
+[DEBUG]  Deflating res/layout/titanium_ui_edittext.xml
+[DEBUG]  Deflating res/layout/titanium_ui_list_header_or_footer.xml
+[DEBUG]  Deflating res/layout/titanium_ui_list_item.xml
+[DEBUG]  Deflating res/layout/titanium_ui_spinner.xml
+[DEBUG]  Deflating res/layout/titanium_ui_switchcompat.xml
+[DEBUG]  Deflating resources.arsc
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/kroll-v8.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-analytics.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/aps-analytics.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-android.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/jaxen-1.1.1.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/ti-commons-codec-1.3.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/kroll-common.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/titanium.jar
+[DEBUG]  Deflating org/appcelerator/titanium/build.properties
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/background.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_100.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_18.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_48.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_64.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more_100.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more_18.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more_48.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_more_64.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_picker_normal.9.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_picker_pressed.9.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/btn_picker_selected.9.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/default_icon.png
+[DEBUG]  Adding org/appcelerator/titanium/res/drawable/photoDefault.png
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-app.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-ui.jar
+[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/binding.js
+[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/binding.min.js
+[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/json2.js
+[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/polling.js
+[DEBUG]  Deflating ti/modules/titanium/ui/widget/webview/polling.min.js
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/nineoldandroids-appc-2.4.0.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-filesystem.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-media.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-appcompat.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/android-support-v4.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/android-support-v7-appcompat.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-locale.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-network.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/thirdparty.jar
+[DEBUG]  Deflating org/apache/Commons-NOTICE.txt
+[DEBUG]  Deflating org/apache/HttpComponents-NOTICE.txt
+[DEBUG]  Deflating org/apache/mime4j-NOTICE.txt
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-xml.jar
+[DEBUG]  Processing /Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/modules/titanium-platform.jar
+[DEBUG]  Adding classes.dex
+[INFO]   Processing /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/src
+[DEBUG]  Adding lib/armeabi/libkroll-v8.so
+[DEBUG]  Adding lib/armeabi/libstlport_shared.so
+[DEBUG]  Adding lib/armeabi/libtiverify.so
+[DEBUG]  Adding lib/armeabi-v7a/libkroll-v8.so
+[DEBUG]  Adding lib/armeabi-v7a/libstlport_shared.so
+[DEBUG]  Adding lib/armeabi-v7a/libtiverify.so
+[DEBUG]  Adding lib/x86/libkroll-v8.so
+[DEBUG]  Adding lib/x86/libstlport_shared.so
+[DEBUG]  Adding lib/x86/libtiverify.so
+[INFO]   Writing unsigned apk: /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/app-unsigned.apk
+[INFO]   Using MD5withRSA signature algorithm
+[INFO]   Signing apk: /Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/bin/jarsigner "-sigalg" "MD5withRSA" "-digestalg" "SHA1" "-keystore" "/Users/sandravictorin/Library/Application Support/Titanium/mobilesdk/osx/4.0.0.GA/android/dev_keystore" "-storepass" "*******" "-signedjar" "/Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/groundandroid.apk" "/Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/app-unsigned.apk" "tidev"
+[INFO]   Aligning zip file: /Users/sandravictorin/Library/android-sdk-macosx/build-tools/23.0.0.2/zipalign "-v" "4" "/Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/groundandroid.apk" "/Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/groundandroid.apkz"
+[INFO]   Writing build manifest: /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/build-manifest.json
+[INFO]   Making sure the adb server is running
+[INFO]   Installing apk: /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/groundandroid.apk
+[INFO]   Installing app on device: GT-I9300
+[TRACE]  Checking if package manager service is started
+[TRACE]  Package manager has started
+[TRACE]  Executing: /Users/sandravictorin/Library/android-sdk-macosx/platform-tools/adb -s 4df1eed56bd38fb1 install -r /Users/sandravictorin/Documents/Appcelerator_Studio_Workspace/groundandroid/build/android/bin/groundandroid.apk
+[INFO]   App successfully installed
+[INFO]   Starting app: com.groundandroid/.GroundandroidActivity
+[DEBUG]  Trying to start the app...
+[INFO]   Application pid: 2145
+[INFO]   Project built successfully in 35s 152ms
