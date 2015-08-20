@@ -118,7 +118,9 @@ rows.push(specifiedDepthRow);
 var calcRow = createTableViewRow(75, 'transparent', 'absolute');
 var calculateBtn = Titanium.UI.createButton({
 	title:'Calculate',
-	width:200
+	width:200,
+	backgroundColor: 'transparent',
+	color: '#B5CCEF'
 });    
 
 calcRow.add(calculateBtn);
@@ -130,7 +132,7 @@ calculateBtn.addEventListener('click', function()
 
 //***********************************************************
 var resultHeaderRow = createTableViewRow('auto', 'transparent', 'absolute'); 
-resultHeaderRow.backgroundColor = 'lightgray';
+resultHeaderRow.backgroundColor = '#909FB9';
 var resultHeaderLbl = Titanium.UI.createLabel({
 	text: 'Result:',
 	font:{fontSize:18,fontWeight:'bold',fontFamily:'Helvetica Neue'},
