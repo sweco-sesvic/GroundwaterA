@@ -1,1 +1,0 @@
-/Users/sesvic/GroundwaterA/Resources/DetailDescription.js

@@ -9,9 +9,27 @@ var textColor ='#FFF';
 var rowHeight = 40;
 var rows = [];
 
+win.addEventListener("load", function(){
+    var1.hide();
+    var2.hide();
+    var3.hide();
+    // Ti.UI.Android.hideSoftKeyboard();
+});
+
+// win.addEventListener('open', function (e) {
+    // setTimeout(function () {
+        // var1.setEnabled(true);
+        // var2.setEnabled(true);
+        // var3.setEnabled(true);
+    // }, 1000);
+// });
+
 
 //****DESCRIPTION LABEL*****
-var descRow = createTableViewRow('auto', 'transparent', 'absolute');
+var descRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var descLabel = Titanium.UI.createLabel({
 	text: "This application estimates the basic settlements of a uniform flat soil, subject to groundwater drawdown.",
 	font:{fontSize:14,fontFamily:'Helvetica Neue'},
@@ -20,11 +38,15 @@ var descLabel = Titanium.UI.createLabel({
 });	
 
 descRow.add(descLabel);
-rows.push(descRow);
+//rows.push(descRow);
+win.add(descRow);
     
 //****************** INPUT FIELDS *******************
 
-var soilStiffnessRow = createTableViewRow('auto', 'transparent', 'absolute');
+var soilStiffnessRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 
 var lbl1 = Titanium.UI.createLabel({
 	text: 'One-dimensional soil\nstiffness E`(0) (MPa):',
@@ -35,19 +57,22 @@ var lbl1 = Titanium.UI.createLabel({
 soilStiffnessRow.add(lbl1);
 
 var var1 = Titanium.UI.createTextField({
-        // borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
-        // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width:130,
         right: 5
 });
-soilStiffnessRow.height = rowHeight;
+//soilStiffnessRow.height = rowHeight;
 soilStiffnessRow.add(var1);
-rows.push(soilStiffnessRow);
+//rows.push(soilStiffnessRow);
+win.add(soilStiffnessRow);
 
-var soilLayerThicknessRow = createTableViewRow('auto', 'transparent', 'absolute');
+var soilLayerThicknessRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var lbl2 = Titanium.UI.createLabel({
 	text: 'Soil layer thickness at\nPOI with E`(0) (m):',	
 	left: 5,
@@ -65,11 +90,16 @@ var var2 = Titanium.UI.createTextField({
 		right: 5,
 		width: 130
     });
-soilLayerThicknessRow.height = rowHeight;
+//soilLayerThicknessRow.height = rowHeight;
 soilLayerThicknessRow.add(var2);
-rows.push(soilLayerThicknessRow);
+//rows.push(soilLayerThicknessRow);
+win.add(soilLayerThicknessRow);
 
-var drawDownRow = createTableViewRow('auto', 'transparent', 'absolute');
+var drawDownRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var lbl3 = Titanium.UI.createLabel({
 	text: 'Drawdown at point of\ninterest (POI) (m):',  
 	left: 5,
@@ -88,9 +118,10 @@ var var3 = Titanium.UI.createTextField({
         right: 5
     });
 
-drawDownRow.height = rowHeight;    
+//drawDownRow.height = rowHeight;    
 drawDownRow.add(var3);
-rows.push(drawDownRow);    
+//rows.push(drawDownRow);  
+win.add(drawDownRow);  
 
 //******************** CALCULATEBTN************************** 
 var calcRow = createTableViewRow(75, 'transparent', 'absolute');
@@ -144,6 +175,7 @@ var tableView = Titanium.UI.createTableView({
 		top: 10
 	});
 
+
 win.add(tableView);			
 
 //********** Calculate ****************************
@@ -157,16 +189,14 @@ function Calculate()
 	var resultRounded = Math.round(result*1)/1;
 
 
-if (isNaN(resultRounded))
-	{
+	if (isNaN(resultRounded)){
 		resultLbl.text = 'Result is null, check input fields!';
-	}
-else 
-	{
+	} else {
 		resultLbl.text = 'The magnitude of settlement at POI is (mm): '+resultRounded+'';
-
+		var1.value = '';
 	}
 }
+
 win.addEventListener("click", function()
 {
     var1.blur();
@@ -174,6 +204,7 @@ win.addEventListener("click", function()
     var3.blur();
 
 });
+
 function createTableViewRow(height, selBgColor, layout){
 	return Ti.UI.createTableViewRow({
 		height: height,

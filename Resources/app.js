@@ -1,6 +1,8 @@
 // this sets the background color of the master UIView (when there are no windows/tab groups on it)
 Titanium.UI.setBackgroundColor('#000');
-var win = Ti.UI.createWindow();
+var win = Ti.UI.createWindow({
+	// layout: 'vertical'
+});
 
 var tableData = [
 		{
@@ -142,6 +144,13 @@ var tableData = [
 			height: 68,			
 			color: 'white', 
 			id:'20'
+		}, 
+		{
+			title:'test', 
+			hasChild: true, 
+			height: 68,			
+			color: 'white', 
+			id:'21'
 		} 
 	];
 
@@ -237,10 +246,15 @@ table.addEventListener('click', function (e) {
 	{
 		url = 'ReliabilityOfSystems.js';	
 	}
+	if (e.index =='20')
+	{
+		url = 'test.js';	
+	}
 	
    	var contentInfo = Titanium.UI.createWindow({
         title: e.row.title,
-        url: url
+        url: url,
+        layout: 'vertical'
     });
     
     contentInfo.open();
