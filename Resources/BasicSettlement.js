@@ -9,21 +9,6 @@ var textColor ='#FFF';
 var rowHeight = 40;
 var rows = [];
 
-win.addEventListener("load", function(){
-    var1.hide();
-    var2.hide();
-    var3.hide();
-    // Ti.UI.Android.hideSoftKeyboard();
-});
-
-// win.addEventListener('open', function (e) {
-    // setTimeout(function () {
-        // var1.setEnabled(true);
-        // var2.setEnabled(true);
-        // var3.setEnabled(true);
-    // }, 1000);
-// });
-
 
 //****DESCRIPTION LABEL*****
 var descRow = Titanium.UI.createView({
@@ -124,7 +109,11 @@ drawDownRow.add(var3);
 win.add(drawDownRow);  
 
 //******************** CALCULATEBTN************************** 
-var calcRow = createTableViewRow(75, 'transparent', 'absolute');
+var calcRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var calculateBtn = Titanium.UI.createButton({
 	title:'Calculate',
 	width:200,
@@ -133,14 +122,19 @@ var calculateBtn = Titanium.UI.createButton({
 });    
 
 calcRow.add(calculateBtn);
-rows.push(calcRow);
+win.add(calcRow);
+
 calculateBtn.addEventListener('click', function()
 {
 	Calculate();
 });
 
 //***********************************************************
-var resultHeaderRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultHeaderRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+ 
 resultHeaderRow.backgroundColor = '#909FB9';
 var resultHeaderLbl = Titanium.UI.createLabel({
 	text: 'Result:',
@@ -149,9 +143,14 @@ var resultHeaderLbl = Titanium.UI.createLabel({
 	left: 5
 });	
 resultHeaderRow.add(resultHeaderLbl);
-rows.push(resultHeaderRow);
+//rows.push(resultHeaderRow);
+win.add(resultHeaderRow);
 
-var resultRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+ 
 var resultLbl = Titanium.UI.createLabel({
 	text: 'The magnitude of settlement at POI is (mm):',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -159,24 +158,24 @@ var resultLbl = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultRow.height = rowHeight;
+
 resultRow.add(resultLbl);
-rows.push(resultRow);
+win.add(resultRow);
 
-
-var tableView = Titanium.UI.createTableView({
-		data: rows, 
-		//style: Titanium.UI.iPhone.TableViewStyle.PLAIN,
-		separatorStyle: 0, 
-		separatorColor: 'transparent',
-		backgroundColor:'transparent',
-		height:'auto',
-		left: 5,
-		top: 10
-	});
-
-
-win.add(tableView);			
+// 
+// var tableView = Titanium.UI.createTableView({
+		// data: rows, 
+		// //style: Titanium.UI.iPhone.TableViewStyle.PLAIN,
+		// separatorStyle: 0, 
+		// separatorColor: 'transparent',
+		// backgroundColor:'transparent',
+		// height:'auto',
+		// left: 5,
+		// tosp: 10
+	// });
+// 
+// 
+// win.add(tableView);			
 
 //********** Calculate ****************************
 function Calculate()
@@ -193,7 +192,6 @@ function Calculate()
 		resultLbl.text = 'Result is null, check input fields!';
 	} else {
 		resultLbl.text = 'The magnitude of settlement at POI is (mm): '+resultRounded+'';
-		var1.value = '';
 	}
 }
 
@@ -205,13 +203,13 @@ win.addEventListener("click", function()
 
 });
 
-function createTableViewRow(height, selBgColor, layout){
-	return Ti.UI.createTableViewRow({
-		height: height,
-		layout: layout,
-		selectedBackgroundColor: selBgColor
-	});
-}
+// function createTableViewRow(height, selBgColor, layout){
+	// return Ti.UI.createTableViewRow({
+		// height: height,
+		// layout: layout,
+		// selectedBackgroundColor: selBgColor
+	// });
+// }
 
 //***************** ABOUT WINDOW ***********************
 

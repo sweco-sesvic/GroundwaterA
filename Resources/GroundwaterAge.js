@@ -11,7 +11,11 @@ var rows = [];
 
 
 //****DESCRIPTION LABEL*****
-var descRow = createTableViewRow('auto', 'transparent', 'absolute');
+var descRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var descLabel = Titanium.UI.createLabel({
 	text: "This application calculates the age at certain depth in a homogenuos aquifer with uniform recharge.",
 	font:{fontSize:14,fontFamily:'Helvetica Neue'},
@@ -20,11 +24,14 @@ var descLabel = Titanium.UI.createLabel({
 });	
 
 descRow.add(descLabel);
-rows.push(descRow);
+win.add(descRow);
 
 //****************** INPUT FIELDS *******************
 
-var aquiferRow = createTableViewRow('auto', 'transparent', 'absolute');
+var aquiferRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 
 var lbl1 = Titanium.UI.createLabel({
 	text: 'Aquifer depth (m):',
@@ -43,11 +50,13 @@ var var1 = Titanium.UI.createTextField({
         width:130,
         right: 5
 });
-aquiferRow.height = rowHeight;
 aquiferRow.add(var1);
-rows.push(aquiferRow);
+win.add(aquiferRow);
 
-var rechargeRow = createTableViewRow('auto', 'transparent', 'absolute');
+var rechargeRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl2 = Titanium.UI.createLabel({
 	text: 'Recharge (m/yr):',
 	left: 5,
@@ -64,12 +73,14 @@ var var2 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
 		width: 130
-    });
-rechargeRow.height = rowHeight;    
+    });   
 rechargeRow.add(var2);
-rows.push(rechargeRow);
+win.add(rechargeRow);
 
-var effectivePorosityRow = createTableViewRow('auto', 'transparent', 'absolute');
+var effectivePorosityRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl3 = Titanium.UI.createLabel({
 	text: 'Effective porosity (-):',
 	left: 5,
@@ -86,12 +97,14 @@ var var3 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 130,
         right: 5
-    });
-effectivePorosityRow.height = rowHeight;    
+    });   
 effectivePorosityRow.add(var3);
-rows.push(effectivePorosityRow);    
+win.add(effectivePorosityRow);    
 
-var specifiedDepthRow = createTableViewRow('auto', 'transparent', 'absolute');
+var specifiedDepthRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl4 = Titanium.UI.createLabel({
 	text: 'Specified depth (m):',
 	left: 5,
@@ -108,14 +121,16 @@ var var4 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 130,
         right: 5
-    });
-specifiedDepthRow.height = rowHeight;    
+    });  
 specifiedDepthRow.add(var4);
-rows.push(specifiedDepthRow); 
+win.add(specifiedDepthRow); 
 
 
 //******************** CALCULATEBTN************************** 
-var calcRow = createTableViewRow(75, 'transparent', 'absolute');
+var calcRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var calculateBtn = Titanium.UI.createButton({
 	title:'Calculate',
 	width:200,
@@ -124,14 +139,18 @@ var calculateBtn = Titanium.UI.createButton({
 });    
 
 calcRow.add(calculateBtn);
-rows.push(calcRow);
+win.add(calcRow);
+
 calculateBtn.addEventListener('click', function()
 {
 	Calculate();
 });
 
 //***********************************************************
-var resultHeaderRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultHeaderRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+}); 
 resultHeaderRow.backgroundColor = '#909FB9';
 var resultHeaderLbl = Titanium.UI.createLabel({
 	text: 'Result:',
@@ -140,9 +159,12 @@ var resultHeaderLbl = Titanium.UI.createLabel({
 	left: 5
 });	
 resultHeaderRow.add(resultHeaderLbl);
-rows.push(resultHeaderRow);
+win.add(resultHeaderRow);
 
-var resultRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var resultLbl = Titanium.UI.createLabel({
 	text: 'Age (yr) at specified depth :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -150,25 +172,9 @@ var resultLbl = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultRow.height = rowHeight;
 resultRow.add(resultLbl);
-rows.push(resultRow);
+win.add(resultRow);
 
-
-var tableView = Titanium.UI.createTableView({
-		data: rows, 
-		style: Titanium.UI.iPhone.TableViewStyle.PLAIN,
-		separatorStyle: 0, 
-		separatorColor: 'transparent',
-		backgroundColor:'transparent',
-		height:'auto',
-		left: 5,
-		top: 10
-	});
-
-win.add(tableView);
-
-//Var4*Math.exp(2*3,14*var2*var3)/var1
 //********** Calculate ****************************
 function Calculate()
 {
@@ -196,13 +202,6 @@ win.addEventListener("click", function()
     var4.blur();
 });
 
-function createTableViewRow(height, selBgColor, layout){
-	return Ti.UI.createTableViewRow({
-		height: height,
-		layout: layout,
-		selectedBackgroundColor: selBgColor
-	});
-}
 
 //***************** ABOUT WINDOW ***********************
 

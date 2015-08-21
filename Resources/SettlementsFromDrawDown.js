@@ -11,7 +11,10 @@ var rows = [];
 
 
 //****DESCRIPTION LABEL*****
-var descRow = createTableViewRow('auto', 'transparent', 'absolute');
+var descRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var descLabel = Titanium.UI.createLabel({
 	text: "This application estimates the basic settlements at a point of interest (POI), subject to groundwater drawdown, caused by nearby pumping/drainage.",
 	font:{fontSize:14,fontFamily:'Helvetica Neue'},
@@ -20,11 +23,14 @@ var descLabel = Titanium.UI.createLabel({
 });	
 
 descRow.add(descLabel);
-rows.push(descRow);
+win.add(descRow);
     
 //****************** INPUT FIELDS *******************
 
-var pumpingrateRow = createTableViewRow('auto', 'transparent', 'absolute');
+var pumpingrateRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 
 var lbl1 = Titanium.UI.createLabel({
 	text: 'Pumping rate (m³/s):',
@@ -43,11 +49,14 @@ var var1 = Titanium.UI.createTextField({
         width:130,
         right: 5
 });
-pumpingrateRow.height = rowHeight;
-pumpingrateRow.add(var1);
-rows.push(pumpingrateRow);
 
-var transmissivityRow = createTableViewRow('auto', 'transparent', 'absolute');
+pumpingrateRow.add(var1);
+win.add(pumpingrateRow);
+
+var transmissivityRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl2 = Titanium.UI.createLabel({
 	text: 'Transmissivity (m²/s):',
 	left: 5,
@@ -64,12 +73,14 @@ var var2 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
 		width: 130
-    });
-transmissivityRow.height = rowHeight;    
+    });    
 transmissivityRow.add(var2);
-rows.push(transmissivityRow);
+win.add(transmissivityRow);
 
-var estimatedInfluenceRow = createTableViewRow('auto', 'transparent', 'absolute');
+var estimatedInfluenceRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl3 = Titanium.UI.createLabel({
 	text: 'Estimated influence\nradius from pumping (m):',
 	left: 5,
@@ -86,12 +97,14 @@ var var3 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 130,
         right: 5
-    });
-estimatedInfluenceRow.height = rowHeight;    
+    });   
 estimatedInfluenceRow.add(var3);
-rows.push(estimatedInfluenceRow);    
+win.add(estimatedInfluenceRow);    
 
-var distanceFromPumpingArea = createTableViewRow('auto', 'transparent', 'absolute');
+var distanceFromPumpingArea = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl4 = Titanium.UI.createLabel({
 	text: 'Distance from\npumping area to POI (m):',
 	left: 5,
@@ -108,13 +121,14 @@ var var4 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 130,
         right: 5
-    });
-distanceFromPumpingArea.height = 45;    
+    });    
 distanceFromPumpingArea.add(var4);
-rows.push(distanceFromPumpingArea);
+win.add(distanceFromPumpingArea);
 
-
-var soilLayerThicknessRow = createTableViewRow('auto', 'transparent', 'absolute');
+var soilLayerThicknessRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl5 = Titanium.UI.createLabel({
 	text: 'Soil layer thickness\nat POI with E`(0) (m):',
 	left: 5,
@@ -131,13 +145,14 @@ var var5 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 130,
         right: 5
-    });
-soilLayerThicknessRow.height = 45;    
+    });   
 soilLayerThicknessRow.add(var5);
-rows.push(soilLayerThicknessRow);    
+win.add(soilLayerThicknessRow);    
 
-
-var oneDimensionalSoilRow = createTableViewRow('auto', 'transparent', 'absolute');
+var oneDimensionalSoilRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl6 = Titanium.UI.createLabel({
 	text: 'One-dimensional\nsoil stiffness E`(0) (MPa):',
 	left: 5,
@@ -154,14 +169,16 @@ var var6 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 130,
         right: 5
-    });
-oneDimensionalSoilRow.height = 45;    
+    });   
 oneDimensionalSoilRow.add(var6);
-rows.push(oneDimensionalSoilRow);
+win.add(oneDimensionalSoilRow);
 
 
 //******************** CALCULATEBTN************************** 
-var calcRow = createTableViewRow(75, 'transparent', 'absolute');
+var calcRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var calculateBtn = Titanium.UI.createButton({
 	title:'Calculate',
 	width:200,
@@ -170,14 +187,18 @@ var calculateBtn = Titanium.UI.createButton({
 });    
 
 calcRow.add(calculateBtn);
-rows.push(calcRow);
+win.add(calcRow);
+
 calculateBtn.addEventListener('click', function()
 {
 	Calculate();
 });
 
 //***********************************************************
-var resultHeaderRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultHeaderRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 resultHeaderRow.backgroundColor = '#909FB9';
 var resultHeaderLbl = Titanium.UI.createLabel({
 	text: 'Result:',
@@ -186,9 +207,12 @@ var resultHeaderLbl = Titanium.UI.createLabel({
 	left: 5
 });	
 resultHeaderRow.add(resultHeaderLbl);
-rows.push(resultHeaderRow);
+win.add(resultHeaderRow);
 
-var resultRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var resultLbl = Titanium.UI.createLabel({
 	text: 'The magnitude of settlement at POI is (mm):',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -196,28 +220,10 @@ var resultLbl = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });
-	
-resultRow.height = rowHeight;
 resultRow.add(resultLbl);
-rows.push(resultRow);
+win.add(resultRow);
 
 
-var tableView = Titanium.UI.createTableView({
-		data: rows, 
-		style: Titanium.UI.iPhone.TableViewStyle.PLAIN,
-		separatorStyle: 0, 
-		separatorColor: 'transparent',
-		backgroundColor:'transparent',
-		height:'auto',
-		left: 5,
-		top: 10
-	});
-
-win.add(tableView);
-
-//*************************************************
-
-//Var4*Math.exp(2*3,14*var2*var3)/var1
 //********** Calculate ****************************
 function Calculate()
 {
@@ -227,15 +233,6 @@ var val3 = parseFloat(var3.value.replace(',', '.'));
 var val4 = parseFloat(var4.value.replace(',', '.'));
 var val5 = parseFloat(var5.value.replace(',', '.'));
 var val6 = parseFloat(var6.value.replace(',', '.'));
-
-// var val1 = 0.001;
-// var val2 = 0.0005;
-// var val3= 500;
-// var val4= 0.1;
-// var val5 = 1;
-// var val6 = 10;
- 
-
 
 var result = ((val1/(2*Math.PI*val2))*(Math.log(val3/val4)))*val5*((10/val6));
 
@@ -259,14 +256,6 @@ win.addEventListener("click", function()
     var5.blur();
     var6.blur();
 });
-
-function createTableViewRow(height, selBgColor, layout){
-	return Ti.UI.createTableViewRow({
-		height: height,
-		layout: layout,
-		selectedBackgroundColor: selBgColor
-	});
-}
 
 //***************** ABOUT WINDOW ***********************
 

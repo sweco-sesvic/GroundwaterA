@@ -11,7 +11,10 @@ var rows = [];
 
 
 //****DESCRIPTION LABEL****
-var descRow = createTableViewRow('auto', 'transparent', 'absolute');
+var descRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var descLabel = Titanium.UI.createLabel({
 	text: "This application estimates the radial inflow to an excavation by Darcy´s equation Q=kiA.",
 	font:{fontSize:14,fontFamily:'Helvetica Neue'},
@@ -20,11 +23,14 @@ var descLabel = Titanium.UI.createLabel({
 });	
 
 descRow.add(descLabel);
-rows.push(descRow);
+win.add(descRow);
 
     
 //****************** INPUT FIELDS *******************
-var estimatedInfluenceRow = createTableViewRow('auto', 'transparent', 'absolute');
+var estimatedInfluenceRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 
 var lbl0 = Titanium.UI.createLabel({
 	text: 'Estimated influence\nradius R(0) (m): ',
@@ -43,13 +49,13 @@ var var0 = Titanium.UI.createTextField({
         width:110,
         right: 5
 });
-estimatedInfluenceRow.height = rowHeight;
 estimatedInfluenceRow.add(var0);
-rows.push(estimatedInfluenceRow);
+win.add(estimatedInfluenceRow);
 
-
-
-var radiusOfExcavationRow = createTableViewRow('auto', 'transparent', 'absolute');
+var radiusOfExcavationRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 
 var lbl1 = Titanium.UI.createLabel({
 	text: 'Radius of\nexcavation r(w) (m):',
@@ -68,11 +74,14 @@ var var1 = Titanium.UI.createTextField({
         width:110,
         right: 5
 });
-radiusOfExcavationRow.height = rowHeight;
 radiusOfExcavationRow.add(var1);
-rows.push(radiusOfExcavationRow);
+win.add(radiusOfExcavationRow);
 
-var waterHeadInfluenceRow = createTableViewRow('auto', 'transparent', 'absolute');
+var waterHeadInfluenceRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var lbl2 = Titanium.UI.createLabel({
 	text: 'Water head H(0) at influence\nradius (m):',
 	left: 5,
@@ -89,12 +98,15 @@ var var2 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
 		width: 110
-    });
-waterHeadInfluenceRow.height = rowHeight;    
+    });   
 waterHeadInfluenceRow.add(var2);
-rows.push(waterHeadInfluenceRow);
+win.add(waterHeadInfluenceRow);
 
-var waterheadCentreRow = createTableViewRow('auto', 'transparent', 'absolute');
+var waterheadCentreRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var lbl3 = Titanium.UI.createLabel({
 	text: 'Water head H(w) at centre of\nexcavation (m):',
 	left: 5,
@@ -111,12 +123,14 @@ var var3 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 110,
         right: 5
-    });
-waterheadCentreRow.height = rowHeight;    
+    }); 
 waterheadCentreRow.add(var3);
-rows.push(waterheadCentreRow);    
+win.add(waterheadCentreRow);    
 
-var hydraulicConductivityRow = createTableViewRow('auto', 'transparent', 'absolute');
+var hydraulicConductivityRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl4 = Titanium.UI.createLabel({
 	text: 'Hydraulic conductivity (m/s):',
 	left: 5,
@@ -133,15 +147,15 @@ var var4 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 110,
         right: 5
-    });
-hydraulicConductivityRow.height = rowHeight;    
+    });   
 hydraulicConductivityRow.add(var4);
-rows.push(hydraulicConductivityRow);
-
-
+win.add(hydraulicConductivityRow);
 
 //******************** CALCULATEBTN************************** 
-var calcRow = createTableViewRow(75, 'transparent', 'absolute');
+var calcRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var calculateBtn = Titanium.UI.createButton({
 	title:'Calculate',
 	width:200,
@@ -150,14 +164,18 @@ var calculateBtn = Titanium.UI.createButton({
 });    
 
 calcRow.add(calculateBtn);
-rows.push(calcRow);
+win.add(calcRow);
+
 calculateBtn.addEventListener('click', function()
 {
 	Calculate();
 });
 
 //***********************************************************
-var resultHeaderRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultHeaderRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+}); 
 resultHeaderRow.backgroundColor = '#909FB9';
 var resultHeaderLbl = Titanium.UI.createLabel({
 	text: 'Result:',
@@ -166,9 +184,12 @@ var resultHeaderLbl = Titanium.UI.createLabel({
 	left: 5
 });	
 resultHeaderRow.add(resultHeaderLbl);
-rows.push(resultHeaderRow);
+win.add(resultHeaderRow);
 
-var resultRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var resultLbl = Titanium.UI.createLabel({
 	text: 'The estimated inflow Q is (m3/s):',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -176,23 +197,9 @@ var resultLbl = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultRow.height = rowHeight;
 resultRow.add(resultLbl);
-rows.push(resultRow);
+win.add(resultRow);
 
-
-var tableView = Titanium.UI.createTableView({
-		data: rows, 
-		style: Titanium.UI.iPhone.TableViewStyle.PLAIN,
-		separatorStyle: 0, 
-		separatorColor: 'transparent',
-		backgroundColor:'transparent',
-		height:'auto',
-		left: 5,
-		top: 10
-	});
-
-win.add(tableView);
 
 //********** Calculate ****************************
 function Calculate()
@@ -203,13 +210,6 @@ var val2 = parseFloat(var2.value.replace(',', '.'));
 var val3 = parseFloat(var3.value.replace(',', '.'));
 var val4 = parseFloat(var4.value.replace(',', '.'));
 
-// var val0 = 100;
-// var val1 = 10;
-// var val2 = 20.0;
-// var val3 = 12.0;
-// var val4 = 0.001;
-
-
 var m1 = val1+(val0-val1)/2;
 var m4 = (val3+(val2-val3)*(m1/val0))*0.9756;
 var m2 = 0.097*((m4-val3)/m1);
@@ -218,7 +218,6 @@ var m3 = 2* Math.PI*m1*m4;
 
 var result = val4*m2*m3;
 
-//var result = ((val2-val3)/2)/((val1+(val0-val1)/2))*2*Math.PI*(val1+(val0-val1)/2)*(val3+(val2-val3)/2)*val4;
 var resultRounded = Math.round(result*10000)/1000;
 if (isNaN(resultRounded))
 	{
@@ -238,13 +237,6 @@ win.addEventListener("click", function()
     var4.blur();
 
 });
-function createTableViewRow(height, selBgColor, layout){
-	return Ti.UI.createTableViewRow({
-		height: height,
-		layout: layout,
-		selectedBackgroundColor: selBgColor
-	});
-}
 
 //***************** ABOUT WINDOW ***********************
 

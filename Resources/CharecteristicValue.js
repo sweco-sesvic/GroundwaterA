@@ -11,7 +11,11 @@ var rows = [];
 
 
 //****DESCRIPTION LABEL*****
-var descRow = createTableViewRow('auto', 'transparent', 'absolute');
+var descRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var descLabel = Titanium.UI.createLabel({
 	text: "This application estimates the characteristic value from limited knowledge of ground properties (Eurocode 7).",
 	font:{fontSize:14,fontFamily:'Helvetica Neue'},
@@ -20,11 +24,14 @@ var descLabel = Titanium.UI.createLabel({
 });	
 
 descRow.add(descLabel);
-rows.push(descRow);
+win.add(descRow);
     
 //****************** INPUT FIELDS *******************
 
-var estimatedMinimumRow = createTableViewRow('auto', 'transparent', 'absolute');
+var estimatedMinimumRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 
 var lbl1 = Titanium.UI.createLabel({
 	text: 'Estimated minimum value:',
@@ -43,11 +50,15 @@ var var1 = Titanium.UI.createTextField({
         width:110,
         right: 5
 });
-estimatedMinimumRow.height = rowHeight;
-estimatedMinimumRow.add(var1);
-rows.push(estimatedMinimumRow);
 
-var estimatedMostLikelyRow = createTableViewRow('auto', 'transparent', 'absolute');
+estimatedMinimumRow.add(var1);
+win.add(estimatedMinimumRow);
+
+var estimatedMostLikelyRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var lbl2 = Titanium.UI.createLabel({
 	text: 'Estimated most likely value:',	
 	left: 5,
@@ -65,11 +76,15 @@ var var2 = Titanium.UI.createTextField({
 		right: 5,
 		width: 110
     });
-estimatedMostLikelyRow.height = rowHeight;
-estimatedMostLikelyRow.add(var2);
-rows.push(estimatedMostLikelyRow);
 
-var estimatedMaximumRow = createTableViewRow('auto', 'transparent', 'absolute');
+estimatedMostLikelyRow.add(var2);
+win.add(estimatedMostLikelyRow);
+
+var estimatedMaximumRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var lbl3 = Titanium.UI.createLabel({
 	text: 'Estimated maximum value:',  
 	left: 5,
@@ -87,14 +102,16 @@ var var3 = Titanium.UI.createTextField({
         width: 110,
         right: 5
     });
-
-estimatedMaximumRow.height = rowHeight;    
+        
 estimatedMaximumRow.add(var3);
-rows.push(estimatedMaximumRow);    
-
+win.add(estimatedMaximumRow);    
 
 //******************** CALCULATEBTN************************** 
-var calcRow = createTableViewRow(75, 'transparent', 'absolute');
+var calcRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var calculateBtn = Titanium.UI.createButton({
 	title:'Calculate',
 	width:200,
@@ -103,14 +120,19 @@ var calculateBtn = Titanium.UI.createButton({
 });    
 
 calcRow.add(calculateBtn);
-rows.push(calcRow);
+win.add(calcRow);
+
 calculateBtn.addEventListener('click', function()
 {
 	Calculate();
 });
 
 //***********************************************************
-var resultHeaderRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultHeaderRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+ 
 resultHeaderRow.backgroundColor = '#909FB9';
 var resultHeaderLbl = Titanium.UI.createLabel({
 	text: 'Result:',
@@ -119,9 +141,12 @@ var resultHeaderLbl = Titanium.UI.createLabel({
 	left: 5
 });	
 resultHeaderRow.add(resultHeaderLbl);
-rows.push(resultHeaderRow);
+win.add(resultHeaderRow);
 
-var resultRow1 = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultRow1 = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+}); 
 var resultLbl1 = Titanium.UI.createLabel({
 	text: 'The conservative characteristic value is :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -129,11 +154,13 @@ var resultLbl1 = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultRow1.height = rowHeight;
 resultRow1.add(resultLbl1);
-rows.push(resultRow1);
+win.add(resultRow1);
 
-var resultRow2 = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultRow2 = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var resultLbl2 = Titanium.UI.createLabel({
 	text: 'The three-point weighted average is :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -141,27 +168,9 @@ var resultLbl2 = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultRow2.height = rowHeight;
 resultRow2.add(resultLbl2);
-rows.push(resultRow2);
-
-
-var tableView = Titanium.UI.createTableView({
-		data: rows, 
-		style: Titanium.UI.iPhone.TableViewStyle.PLAIN,
-		separatorStyle: 0, 
-		separatorColor: 'transparent',
-		backgroundColor:'transparent',
-		height:'auto',
-		left: 5,
-		top: 10
-	});
-
-win.add(tableView);			
-
-//************************************************************
-
-
+win.add(resultRow2);
+			
 //********** Calculate ****************************
 function Calculate()
 {
@@ -203,13 +212,6 @@ win.addEventListener("click", function()
     var3.blur();
 
 });
-function createTableViewRow(height, selBgColor, layout){
-	return Ti.UI.createTableViewRow({
-		height: height,
-		layout: layout,
-		selectedBackgroundColor: selBgColor
-	});
-}
 
 //***************** ABOUT WINDOW ***********************
 

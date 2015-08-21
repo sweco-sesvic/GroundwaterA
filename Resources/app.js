@@ -144,14 +144,7 @@ var tableData = [
 			height: 68,			
 			color: 'white', 
 			id:'20'
-		}, 
-		{
-			title:'test', 
-			hasChild: true, 
-			height: 68,			
-			color: 'white', 
-			id:'21'
-		} 
+		}
 	];
 
 var table = Ti.UI.createTableView({
@@ -245,10 +238,6 @@ table.addEventListener('click', function (e) {
 	if (e.index =='19')
 	{
 		url = 'ReliabilityOfSystems.js';	
-	}
-	if (e.index =='20')
-	{
-		url = 'test.js';	
 	}
 	
    	var contentInfo = Titanium.UI.createWindow({

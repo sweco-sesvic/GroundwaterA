@@ -11,7 +11,11 @@ var rows = [];
 
 
 //****DESCRIPTION LABEL*****
-var descRow = createTableViewRow('auto', 'transparent', 'absolute');
+var descRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var descLabel = Titanium.UI.createLabel({
 	text: "This application calculates the approximate hydraulic conductivity from grain-size analysis by a formula from Prof Gunnar Gustafson.",
 	font:{fontSize:14,fontFamily:'Helvetica Neue'},
@@ -20,12 +24,15 @@ var descLabel = Titanium.UI.createLabel({
 });	
 
 descRow.add(descLabel);
-rows.push(descRow);
+win.add(descRow);
 
     
 //****************** INPUT FIELDS *******************
 
-var d10row = createTableViewRow('auto', 'transparent', 'absolute');
+var d10row = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 
 var lbl1 = Titanium.UI.createLabel({
 	text: 'D10 (mm):',
@@ -44,11 +51,13 @@ var var1 = Titanium.UI.createTextField({
         width:130,
         right: 5
 });
-d10row.height = rowHeight;
 d10row.add(var1);
-rows.push(d10row);
+win.add(d10row);
 
-var d60row = createTableViewRow('auto', 'transparent', 'absolute');
+var d60row = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl2 = Titanium.UI.createLabel({
 	text: 'D60 (mm):',
 	left: 5,
@@ -65,15 +74,16 @@ var var2 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
 		width: 130
-    });
-d60row.height = rowHeight;    
+    }); 
 d60row.add(var2);
-rows.push(d60row);
+win.add(d60row);
   
-
-
+  
 //******************** CALCULATEBTN************************** 
-var calcRow = createTableViewRow(75, 'transparent', 'absolute');
+var calcRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var calculateBtn = Titanium.UI.createButton({
 	title:'Calculate',
 	width:200,
@@ -82,14 +92,18 @@ var calculateBtn = Titanium.UI.createButton({
 });    
 
 calcRow.add(calculateBtn);
-rows.push(calcRow);
+win.add(calcRow);
+
 calculateBtn.addEventListener('click', function()
 {
 	Calculate();
 });
 
 //***********************************************************
-var resultHeaderRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultHeaderRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+}); 
 resultHeaderRow.backgroundColor = '#909FB9';
 var resultHeaderLbl = Titanium.UI.createLabel({
 	text: 'Result:',
@@ -98,9 +112,12 @@ var resultHeaderLbl = Titanium.UI.createLabel({
 	left: 5
 });	
 resultHeaderRow.add(resultHeaderLbl);
-rows.push(resultHeaderRow);
+win.add(resultHeaderRow);
 
-var resultlblRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultlblRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var resultLbl = Titanium.UI.createLabel({
 	text: 'Approximate hydraulic conductivity (m/s) :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -108,11 +125,13 @@ var resultLbl = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultlblRow.height = rowHeight;
 resultlblRow.add(resultLbl);
-rows.push(resultlblRow);
+win.add(resultlblRow);
 
-var resultRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var resultLblCalculated = Titanium.UI.createLabel({
 	text: ' ',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -120,23 +139,8 @@ var resultLblCalculated = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultRow.height = rowHeight;
 resultRow.add(resultLblCalculated);
-rows.push(resultRow);
-
-
-var tableView = Titanium.UI.createTableView({
-		data: rows, 
-		style: Titanium.UI.iPhone.TableViewStyle.PLAIN,
-		separatorStyle: 0, 
-		separatorColor: 'transparent',
-		backgroundColor:'transparent',
-		height:'auto',
-		left: 5,
-		top: 10
-	});
-
-win.add(tableView);
+win.add(resultRow);
 
 
 //********** Calculate ****************************
@@ -172,14 +176,6 @@ win.addEventListener("click", function()
     var2.blur();
 
 });
-
-function createTableViewRow(height, selBgColor, layout){
-	return Ti.UI.createTableViewRow({
-		height: height,
-		layout: layout,
-		selectedBackgroundColor: selBgColor
-	});
-}
 
 //***************** ABOUT WINDOW ***********************
 

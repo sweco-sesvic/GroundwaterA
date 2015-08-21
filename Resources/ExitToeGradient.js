@@ -11,7 +11,10 @@ var rows = [];
 
 
 //****DESCRIPTION LABEL*****
-var descRow = createTableViewRow('auto', 'transparent', 'absolute');
+var descRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var descLabel = Titanium.UI.createLabel({
 	text: "This application calculates the approximate toe exit gradient i(max) in a wide (W>H) sheet pile trench.",
 	font:{fontSize:14,fontFamily:'Helvetica Neue'},
@@ -20,11 +23,14 @@ var descLabel = Titanium.UI.createLabel({
 });	
 
 descRow.add(descLabel);
-rows.push(descRow);
+win.add(descRow);
     
 //****************** INPUT FIELDS *******************
 
-var aquiferHeightRow = createTableViewRow('auto', 'transparent', 'absolute');
+var aquiferHeightRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 
 var lbl1 = Titanium.UI.createLabel({
 	text: 'Aquifer height H\nabove trench bottom (m):',
@@ -43,11 +49,13 @@ var var1 = Titanium.UI.createTextField({
         width:110,
         right: 5
 });
-aquiferHeightRow.height = rowHeight;
 aquiferHeightRow.add(var1);
-rows.push(aquiferHeightRow);
+win.add(aquiferHeightRow);
 
-var pileSheetDepthRow = createTableViewRow('auto', 'transparent', 'absolute');
+var pileSheetDepthRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl2 = Titanium.UI.createLabel({
 	text: 'Pile sheet depth D\nbelow trench bottom (m):',
 	left: 5,
@@ -64,13 +72,16 @@ var var2 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
 		width: 110
-    });
-pileSheetDepthRow.height = rowHeight;    
+    }); 
 pileSheetDepthRow.add(var2);
-rows.push(pileSheetDepthRow);
+win.add(pileSheetDepthRow);
 
 //******************** CALCULATEBTN************************** 
-var calcRow = createTableViewRow(75, 'transparent', 'absolute');
+var calcRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var calculateBtn = Titanium.UI.createButton({
 	title:'Calculate',
 	width:200,
@@ -79,14 +90,19 @@ var calculateBtn = Titanium.UI.createButton({
 });    
 
 calcRow.add(calculateBtn);
-rows.push(calcRow);
+win.add(calcRow);
+
 calculateBtn.addEventListener('click', function()
 {
 	Calculate();
 });
 
 //***********************************************************
-var resultHeaderRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultHeaderRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 resultHeaderRow.backgroundColor = '#909FB9';
 var resultHeaderLbl = Titanium.UI.createLabel({
 	text: 'Result:',
@@ -95,9 +111,12 @@ var resultHeaderLbl = Titanium.UI.createLabel({
 	left: 5
 });	
 resultHeaderRow.add(resultHeaderLbl);
-rows.push(resultHeaderRow);
+win.add(resultHeaderRow);
 
-var resultRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+}); 
 var resultLbl = Titanium.UI.createLabel({
 	text: 'The approximate exit gradient i(max) at toe\n(-):',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -105,23 +124,9 @@ var resultLbl = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultRow.height = rowHeight;
 resultRow.add(resultLbl);
-rows.push(resultRow);
+win.add(resultRow);
 
-
-var tableView = Titanium.UI.createTableView({
-		data: rows, 
-		style: Titanium.UI.iPhone.TableViewStyle.PLAIN,
-		separatorStyle: 0, 
-		separatorColor: 'transparent',
-		backgroundColor:'transparent',
-		height:'auto',
-		left: 5,
-		top: 10
-	});
-
-win.add(tableView);
 
 //********** Calculate ****************************
 function Calculate()
@@ -147,14 +152,6 @@ win.addEventListener("click", function()
     var2.blur();
 
 });
-function createTableViewRow(height, selBgColor, layout){
-	return Ti.UI.createTableViewRow({
-		height: height,
-		layout: layout,
-		selectedBackgroundColor: selBgColor
-	});
-}
-
 
 //***************** ABOUT WINDOW ***********************
 

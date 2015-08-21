@@ -1,0 +1,8 @@
+"/Users/sesvic/GroundwaterA/build/android/gen/android/support/v7/appcompat/R.java"
+"/Users/sesvic/GroundwaterA/build/android/gen/com/groundandroid/ApplicationStylesheet.java"
+"/Users/sesvic/GroundwaterA/build/android/gen/com/groundandroid/AssetCryptImpl.java"
+"/Users/sesvic/GroundwaterA/build/android/gen/com/groundandroid/GroundandroidActivity.java"
+"/Users/sesvic/GroundwaterA/build/android/gen/com/groundandroid/GroundandroidAppInfo.java"
+"/Users/sesvic/GroundwaterA/build/android/gen/com/groundandroid/GroundandroidApplication.java"
+"/Users/sesvic/GroundwaterA/build/android/gen/com/groundandroid/R.java"
+"/Users/sesvic/GroundwaterA/build/android/gen/ti/modules/titanium/ui/R.java"

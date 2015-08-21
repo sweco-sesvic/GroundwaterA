@@ -11,7 +11,10 @@ var rows = [];
 
 
 //****DESCRIPTION LABEL*****
-var descRow = createTableViewRow('auto', 'transparent', 'absolute');
+var descRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var descLabel = Titanium.UI.createLabel({
 	text: "This application estimates the harmonic mean value for three different properties of different weights.",
 	font:{fontSize:14,fontFamily:'Helvetica Neue'},
@@ -20,12 +23,15 @@ var descLabel = Titanium.UI.createLabel({
 });	
 
 descRow.add(descLabel);
-rows.push(descRow);
+win.add(descRow);
 
     
 //****************** INPUT FIELDS *******************
 
-var property1Row = createTableViewRow('auto', 'transparent', 'absolute');
+var property1Row = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 
 var lbl1 = Titanium.UI.createLabel({
 	text: 'Property of layer 1\n(f.i. K(1) or E`(1)):',
@@ -44,11 +50,13 @@ var var1 = Titanium.UI.createTextField({
         width:130,
         right: 5
 });
-property1Row.height = rowHeight;
 property1Row.add(var1);
-rows.push(property1Row);
+win.add(property1Row);
 
-var thickness1Row = createTableViewRow('auto', 'transparent', 'absolute');
+var thickness1Row = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl2 = Titanium.UI.createLabel({
 	text: 'Thickness of layer 1\n(f.i. b(1) (m)):',
 	left: 5,
@@ -65,12 +73,14 @@ var var2 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
 		width: 130
-    });
-thickness1Row.height = rowHeight;    
+    });   
 thickness1Row.add(var2);
-rows.push(thickness1Row);
+win.add(thickness1Row);
 
-var property2Row = createTableViewRow('auto', 'transparent', 'absolute');
+var property2Row = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl3 = Titanium.UI.createLabel({
 	text: 'Property of layer 2\n(f.i. K(2) or E`(2)):',
 	left: 5,
@@ -87,12 +97,14 @@ var var3 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 130,
         right: 5
-    });
-property2Row.height = rowHeight;    
+    });  
 property2Row.add(var3);
-rows.push(property2Row);    
+win.add(property2Row);    
 
-var thickness2Row = createTableViewRow('auto', 'transparent', 'absolute');
+var thickness2Row = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl4 = Titanium.UI.createLabel({
 	text: 'Thickness of layer 2\n(f.i. b(2) (m)):',
 	left: 5,
@@ -109,13 +121,14 @@ var var4 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 130,
         right: 5
-    });
-thickness2Row.height = 45;    
+    });    
 thickness2Row.add(var4);
-rows.push(thickness2Row);
+win.add(thickness2Row);
 
-
-var property3Row = createTableViewRow('auto', 'transparent', 'absolute');
+var property3Row = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl5 = Titanium.UI.createLabel({
 	text: 'Property  of layer 3\n(f.i. K(3) or E`(3)):',
 	left: 5,
@@ -132,13 +145,15 @@ var var5 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 130,
         right: 5
-    });
-property3Row.height = 45;    
+    });    
 property3Row.add(var5);
-rows.push(property3Row);    
+win.add(property3Row);    
 
 
-var thickness3Row = createTableViewRow('auto', 'transparent', 'absolute');
+var thickness3Row = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl6 = Titanium.UI.createLabel({
 	text: 'Thickness of layer 3\n(f.i. b(3) (m)):',
 	left: 5,
@@ -155,14 +170,16 @@ var var6 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 130,
         right: 5
-    });
-thickness3Row.height = 45;    
+    });   
 thickness3Row.add(var6);
-rows.push(thickness3Row);
+win.add(thickness3Row);
 
 
 //******************** CALCULATEBTN************************** 
-var calcRow = createTableViewRow(75, 'transparent', 'absolute');
+var calcRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var calculateBtn = Titanium.UI.createButton({
 	title:'Calculate',
 	width:200,
@@ -171,14 +188,18 @@ var calculateBtn = Titanium.UI.createButton({
 });    
 
 calcRow.add(calculateBtn);
-rows.push(calcRow);
+win.add(calcRow);
+
 calculateBtn.addEventListener('click', function()
 {
 	Calculate();
 });
 
 //***********************************************************
-var resultHeaderRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultHeaderRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+}); 
 resultHeaderRow.backgroundColor = '#909FB9';
 var resultHeaderLbl = Titanium.UI.createLabel({
 	text: 'Result:',
@@ -187,9 +208,12 @@ var resultHeaderLbl = Titanium.UI.createLabel({
 	left: 5
 });	
 resultHeaderRow.add(resultHeaderLbl);
-rows.push(resultHeaderRow);
+win.add(resultHeaderRow);
 
-var resultRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+}); 
 var resultLbl = Titanium.UI.createLabel({
 	text: 'The weighted harmonic mean is:',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -197,27 +221,10 @@ var resultLbl = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });
-	
-resultRow.height = rowHeight;
 resultRow.add(resultLbl);
-rows.push(resultRow);
+win.add(resultRow);
 
 
-var tableView = Titanium.UI.createTableView({
-		data: rows, 
-		style: Titanium.UI.iPhone.TableViewStyle.PLAIN,
-		separatorStyle: 0, 
-		separatorColor: 'transparent',
-		backgroundColor:'transparent',
-		height:'auto',
-		left: 5,
-		top: 10
-	});
-
-win.add(tableView);
-
-
-//Var4*Math.exp(2*3,14*var2*var3)/var1
 //********** Calculate ****************************
 function Calculate()
 {
@@ -227,14 +234,6 @@ var val3 = parseFloat(var3.value.replace(',', '.'));
 var val4 = parseFloat(var4.value.replace(',', '.'));
 var val5 = parseFloat(var5.value.replace(',', '.'));
 var val6 = parseFloat(var6.value.replace(',', '.'));
-
-// var val1 = 0.25000;
-// var val2 = 1.0;
-// var val3 = 1.00000;
-// var val4 = 1.0;
-// var val5 = 1.50000;
-// var val6 = 1.0;
- 
 
 var result =(val2+val4+val6)/((val2/val1)+(val4/val3)+(val6/val5));
 var toExponential = result.toExponential(1);
@@ -260,14 +259,6 @@ win.addEventListener("click", function()
     var5.blur();
     var6.blur();
 });
-
-function createTableViewRow(height, selBgColor, layout){
-	return Ti.UI.createTableViewRow({
-		height: height,
-		layout: layout,
-		selectedBackgroundColor: selBgColor
-	});
-}
 
 //***************** ABOUT WINDOW ***********************
 

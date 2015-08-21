@@ -11,7 +11,10 @@ var rows = [];
 
 
 //****DESCRIPTION LABEL*****
-var descRow = createTableViewRow('auto', 'transparent', 'absolute');
+var descRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var descLabel = Titanium.UI.createLabel({
 	text: "This application estimates the groundwater flow in a narrow system, also considering the recharge.",
 	font:{fontSize:14,fontFamily:'Helvetica Neue'},
@@ -20,12 +23,15 @@ var descLabel = Titanium.UI.createLabel({
 });	
 
 descRow.add(descLabel);
-rows.push(descRow);
+win.add(descRow);
 
     
 //****************** INPUT FIELDS *******************
 
-var populationMeanEstimateRow = createTableViewRow('auto', 'transparent', 'absolute');
+var populationMeanEstimateRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 
 var lbl1 = Titanium.UI.createLabel({
 	text: 'Groundwater recharge \nW upstream (m/yr):',
@@ -44,11 +50,14 @@ var var1 = Titanium.UI.createTextField({
         width:110,
         right: 5
 });
-populationMeanEstimateRow.height = rowHeight;
 populationMeanEstimateRow.add(var1);
-rows.push(populationMeanEstimateRow);
+win.add(populationMeanEstimateRow);
 
-var populationStandardDeviationRow = createTableViewRow('auto', 'transparent', 'absolute');
+var populationStandardDeviationRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var lbl2 = Titanium.UI.createLabel({
 	text: 'Groundwater recharge \narea A upstream (m2):',	
 	left: 5,
@@ -66,11 +75,13 @@ var var2 = Titanium.UI.createTextField({
 		right: 5,
 		width: 110
     });
-populationStandardDeviationRow.height = rowHeight;
 populationStandardDeviationRow.add(var2);
-rows.push(populationStandardDeviationRow);
+win.add(populationStandardDeviationRow);
 
-var sampleMeanValueRow = createTableViewRow('auto', 'transparent', 'absolute');
+var sampleMeanValueRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl3 = Titanium.UI.createLabel({
 	text: 'Average groundwater \ngradient i downstream (-):',  
 	left: 5,
@@ -88,12 +99,14 @@ var var3 = Titanium.UI.createTextField({
         width: 110,
         right: 5
     });
-
-sampleMeanValueRow.height = rowHeight;    
+    
 sampleMeanValueRow.add(var3);
-rows.push(sampleMeanValueRow);    
+win.add(sampleMeanValueRow);    
 
-var sampleStandarDeviationRow = createTableViewRow('auto', 'transparent', 'absolute');
+var sampleStandarDeviationRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl4 = Titanium.UI.createLabel({
 	text: 'Average transmissivity \nT downstream (m2/s):',  
 	left: 5,
@@ -111,12 +124,14 @@ var var4 = Titanium.UI.createTextField({
         width: 110,
         right: 5
     });
-
-sampleStandarDeviationRow.height = rowHeight;    
+  
 sampleStandarDeviationRow.add(var4);
-rows.push(sampleStandarDeviationRow); 
+win.add(sampleStandarDeviationRow); 
 
-var sampleSizeRow = createTableViewRow('auto', 'transparent', 'absolute');
+var sampleSizeRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl5 = Titanium.UI.createLabel({
 	text: 'Average flow width B \ndownstream (m):',  
 	left: 5,
@@ -134,13 +149,15 @@ var var5 = Titanium.UI.createTextField({
         width: 110,
         right: 5
     });
-
-sampleSizeRow.height = rowHeight;    
+ 
 sampleSizeRow.add(var5);
-rows.push(sampleSizeRow);      
+win.add(sampleSizeRow);      
 
 //******************** CALCULATEBTN************************** 
-var calcRow = createTableViewRow(75, 'transparent', 'absolute');
+var calcRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var calculateBtn = Titanium.UI.createButton({
 	title:'Calculate',
 	width:200,
@@ -149,14 +166,19 @@ var calculateBtn = Titanium.UI.createButton({
 });    
 
 calcRow.add(calculateBtn);
-rows.push(calcRow);
+win.add(calcRow);
+
 calculateBtn.addEventListener('click', function()
 {
 	Calculate();
 });
 
 //***********************************************************
-var resultHeaderRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultHeaderRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 resultHeaderRow.backgroundColor = '#909FB9';
 var resultHeaderLbl = Titanium.UI.createLabel({
 	text: 'Result:',
@@ -165,9 +187,12 @@ var resultHeaderLbl = Titanium.UI.createLabel({
 	left: 5
 });	
 resultHeaderRow.add(resultHeaderLbl);
-rows.push(resultHeaderRow);
+win.add(resultHeaderRow);
 
-var resultRow1 = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultRow1 = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var resultLbl1 = Titanium.UI.createLabel({
 	text: 'Calculated groundwater flow to the system (L/s) :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -175,11 +200,14 @@ var resultLbl1 = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultRow1.height = rowHeight;
 resultRow1.add(resultLbl1);
-rows.push(resultRow1);
+win.add(resultRow1);
 
-var resultRow2 = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultRow2 = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var resultLbl2 = Titanium.UI.createLabel({
 	text: 'Calculated groundwater flow in the system (L/s) :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -187,11 +215,13 @@ var resultLbl2 = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultRow2.height = rowHeight;
 resultRow2.add(resultLbl2);
-rows.push(resultRow2);
+win.add(resultRow2);
 
-var resultRow3 = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultRow3 =Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var resultLbl3 = Titanium.UI.createLabel({
 	text: 'Estimated groundwater flow in the system (L/s) :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -199,26 +229,8 @@ var resultLbl3 = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultRow3.height = rowHeight;
 resultRow3.add(resultLbl3);
-rows.push(resultRow3);
-
-
-var tableView = Titanium.UI.createTableView({
-		data: rows, 
-		style: Titanium.UI.iPhone.TableViewStyle.PLAIN,
-		separatorStyle: 0, 
-		separatorColor: 'transparent',
-		backgroundColor:'transparent',
-		height:'auto',
-		left: 5,
-		top: 10
-	});
-
-win.add(tableView);			
-
-
-//************************************************************
+win.add(resultRow3);
 
 
 //********** Calculate ****************************
@@ -270,13 +282,6 @@ win.addEventListener("click", function()
     var4.blur();
     var5.blur();
 });
-function createTableViewRow(height, selBgColor, layout){
-	return Ti.UI.createTableViewRow({
-		height: height,
-		layout: layout,
-		selectedBackgroundColor: selBgColor
-	});
-}
 
 //***************** ABOUT WINDOW ***********************
 

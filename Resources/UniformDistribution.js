@@ -11,7 +11,10 @@ var rows = [];
 
 
 //****DESCRIPTION LABEL*****
-var descRow = createTableViewRow('auto', 'transparent', 'absolute');
+var descRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var descLabel = Titanium.UI.createLabel({
 	text: "Needless to say, many geo parameters are either normally or log normally distributed. Sometimes we don´t know.",
 	font:{fontSize:14,fontFamily:'Helvetica Neue'},
@@ -20,12 +23,15 @@ var descLabel = Titanium.UI.createLabel({
 });	
 
 descRow.add(descLabel);
-rows.push(descRow);
+win.add(descRow);
 
     
 //****************** INPUT FIELDS *******************
 
-var populationMeanEstimateRow = createTableViewRow('auto', 'transparent', 'absolute');
+var populationMeanEstimateRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 
 var lbl1 = Titanium.UI.createLabel({
 	text: 'Upper limit of uniform \ndistribution:',
@@ -44,11 +50,13 @@ var var1 = Titanium.UI.createTextField({
         width:110,
         right: 5
 });
-populationMeanEstimateRow.height = rowHeight;
 populationMeanEstimateRow.add(var1);
-rows.push(populationMeanEstimateRow);
+win.add(populationMeanEstimateRow);
 
-var populationStandardDeviationRow = createTableViewRow('auto', 'transparent', 'absolute');
+var populationStandardDeviationRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl2 = Titanium.UI.createLabel({
 	text: 'Lower limit of uniform \ndistribution:',	
 	left: 5,
@@ -66,11 +74,13 @@ var var2 = Titanium.UI.createTextField({
 		right: 5,
 		width: 110
     });
-populationStandardDeviationRow.height = rowHeight;
 populationStandardDeviationRow.add(var2);
-rows.push(populationStandardDeviationRow);
+win.add(populationStandardDeviationRow);
 
-var sampleMeanValueRow = createTableViewRow('auto', 'transparent', 'absolute');
+var sampleMeanValueRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl3 = Titanium.UI.createLabel({
 	text: 'Upper limit of likely value:',  
 	left: 5,
@@ -88,12 +98,14 @@ var var3 = Titanium.UI.createTextField({
         width: 110,
         right: 5
     });
-
-sampleMeanValueRow.height = rowHeight;    
+  
 sampleMeanValueRow.add(var3);
-rows.push(sampleMeanValueRow);    
+win.add(sampleMeanValueRow);    
 
-var sampleStandarDeviationRow = createTableViewRow('auto', 'transparent', 'absolute');
+var sampleStandarDeviationRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl4 = Titanium.UI.createLabel({
 	text: 'Lower limit of likely value:',  
 	left: 5,
@@ -110,14 +122,15 @@ var var4 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 110,
         right: 5
-    });
-
-sampleStandarDeviationRow.height = rowHeight;    
+    }); 
 sampleStandarDeviationRow.add(var4);
-rows.push(sampleStandarDeviationRow);  
+win.add(sampleStandarDeviationRow);  
 
 //******************** CALCULATEBTN************************** 
-var calcRow = createTableViewRow(75, 'transparent', 'absolute');
+var calcRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var calculateBtn = Titanium.UI.createButton({
 	title:'Calculate',
 	width:200,
@@ -126,14 +139,18 @@ var calculateBtn = Titanium.UI.createButton({
 });    
 
 calcRow.add(calculateBtn);
-rows.push(calcRow);
+win.add(calcRow);
+
 calculateBtn.addEventListener('click', function()
 {
 	Calculate();
 });
 
 //***********************************************************
-var resultHeaderRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultHeaderRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 resultHeaderRow.backgroundColor = '#909FB9';
 var resultHeaderLbl = Titanium.UI.createLabel({
 	text: 'Result:',
@@ -142,9 +159,12 @@ var resultHeaderLbl = Titanium.UI.createLabel({
 	left: 5
 });	
 resultHeaderRow.add(resultHeaderLbl);
-rows.push(resultHeaderRow);
+win.add(resultHeaderRow);
 
-var resultRow1 = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultRow1 = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var resultLbl1 = Titanium.UI.createLabel({
 	text: 'Probability of correct selected value range (%) :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -152,25 +172,9 @@ var resultLbl1 = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultRow1.height = rowHeight;
 resultRow1.add(resultLbl1);
-rows.push(resultRow1);
-
-var tableView = Titanium.UI.createTableView({
-		data: rows, 
-		style: Titanium.UI.iPhone.TableViewStyle.PLAIN,
-		separatorStyle: 0, 
-		separatorColor: 'transparent',
-		backgroundColor:'transparent',
-		height:'auto',
-		left: 5,
-		top: 10
-	});
-
-win.add(tableView);			
-
-//************************************************************
-
+win.add(resultRow1);
+			
 
 //********** Calculate ****************************
 function Calculate()
@@ -199,13 +203,7 @@ win.addEventListener("click", function()
     var3.blur();
     var4.blur();
 });
-function createTableViewRow(height, selBgColor, layout){
-	return Ti.UI.createTableViewRow({
-		height: height,
-		layout: layout,
-		selectedBackgroundColor: selBgColor
-	});
-}
+
 
 //***************** ABOUT WINDOW ***********************
 

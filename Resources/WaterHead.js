@@ -11,7 +11,10 @@ var rows = [];
 
 
 //****DESCRIPTION LABEL*****
-var descRow = createTableViewRow('auto', 'transparent', 'absolute');
+var descRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var descLabel = Titanium.UI.createLabel({
 	text: "This application calculates the water head between two parallel waterfilled trenches.",
 	font:{fontSize:14,fontFamily:'Helvetica Neue'},
@@ -20,11 +23,14 @@ var descLabel = Titanium.UI.createLabel({
 });	
 
 descRow.add(descLabel);
-rows.push(descRow);
+win.add(descRow);
     
 //****************** INPUT FIELDS *******************
 
-var waterHeadUpstreamRow = createTableViewRow('auto', 'transparent', 'absolute');
+var waterHeadUpstreamRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 
 var lbl1 = Titanium.UI.createLabel({
 	text: 'Water head in trench\nupstream at x=0 (m):',
@@ -43,11 +49,13 @@ var var1 = Titanium.UI.createTextField({
         width:110,
         right: 5
 });
-waterHeadUpstreamRow.height = rowHeight;
 waterHeadUpstreamRow.add(var1);
-rows.push(waterHeadUpstreamRow);
+win.add(waterHeadUpstreamRow);
 
-var waterHeadDownstreamRow = createTableViewRow('auto', 'transparent', 'absolute');
+var waterHeadDownstreamRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl2 = Titanium.UI.createLabel({
 	text: 'Water head in trench\ndownstream at x=L (m):',
 	left: 5,
@@ -64,12 +72,14 @@ var var2 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
 		width: 110
-    });
-waterHeadDownstreamRow.height = rowHeight;    
+    });    
 waterHeadDownstreamRow.add(var2);
-rows.push(waterHeadDownstreamRow);
+win.add(waterHeadDownstreamRow);
 
-var HydraukicConductivityRow = createTableViewRow('auto', 'transparent', 'absolute');
+var HydraukicConductivityRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl3 = Titanium.UI.createLabel({
 	text: 'Hydraulic conductivity\nbetween trenches (m/s):',
 	left: 5,
@@ -87,11 +97,13 @@ var var3 = Titanium.UI.createTextField({
         width: 110,
         right: 5
     });
-HydraukicConductivityRow.height = rowHeight;    
 HydraukicConductivityRow.add(var3);
-rows.push(HydraukicConductivityRow);    
+win.add(HydraukicConductivityRow);    
 
-var GroundwaterRechargeRow = createTableViewRow('auto', 'transparent', 'absolute');
+var GroundwaterRechargeRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl4 = Titanium.UI.createLabel({
 	text: 'Groundwater recharge rate\nW (or W=0) (m/yr):',
 	left: 5,
@@ -108,13 +120,14 @@ var var4 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 110,
         right: 5
-    });
-GroundwaterRechargeRow.height = rowHeight;    
+    });  
 GroundwaterRechargeRow.add(var4);
-rows.push(GroundwaterRechargeRow);
+win.add(GroundwaterRechargeRow);
 
-
-var DistanceBetweenTrenchesRow = createTableViewRow('auto', 'transparent', 'absolute');
+var DistanceBetweenTrenchesRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl5 = Titanium.UI.createLabel({
 	text: 'Distance L between\ntrenches (m):',
 	left: 5,
@@ -131,12 +144,14 @@ var var5 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 110,
         right: 5
-    });
-DistanceBetweenTrenchesRow.height = rowHeight;    
+    });   
 DistanceBetweenTrenchesRow.add(var5);
-rows.push(DistanceBetweenTrenchesRow);
+win.add(DistanceBetweenTrenchesRow);
 
-var distanceToDemandedWaterRow = createTableViewRow('auto', 'transparent', 'absolute');
+var distanceToDemandedWaterRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl6 = Titanium.UI.createLabel({
 	text: 'Distance 0<x<L to\ndemanded water head (m):',
 	left: 5,
@@ -153,14 +168,15 @@ var var6 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 110,
         right: 5
-    });
-distanceToDemandedWaterRow.height = rowHeight;    
+    });   
 distanceToDemandedWaterRow.add(var6);
-rows.push(distanceToDemandedWaterRow);    
-
+win.add(distanceToDemandedWaterRow);    
 
 //******************** CALCULATEBTN************************** 
-var calcRow = createTableViewRow(75, 'transparent', 'absolute');
+var calcRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var calculateBtn = Titanium.UI.createButton({
 	title:'Calculate',
 	width:200,
@@ -169,14 +185,18 @@ var calculateBtn = Titanium.UI.createButton({
 });    
 
 calcRow.add(calculateBtn);
-rows.push(calcRow);
+win.add(calcRow);
+
 calculateBtn.addEventListener('click', function()
 {
 	Calculate();
 });
 
 //***********************************************************
-var resultHeaderRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultHeaderRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+}); 
 resultHeaderRow.backgroundColor = '#909FB9';
 var resultHeaderLbl = Titanium.UI.createLabel({
 	text: 'Result:',
@@ -185,9 +205,12 @@ var resultHeaderLbl = Titanium.UI.createLabel({
 	left: 5
 });	
 resultHeaderRow.add(resultHeaderLbl);
-rows.push(resultHeaderRow);
+win.add(resultHeaderRow);
 
-var resultRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var resultLbl = Titanium.UI.createLabel({
 	text: 'The waterhead h at x is (m):',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -195,23 +218,8 @@ var resultLbl = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultRow.height = rowHeight;
 resultRow.add(resultLbl);
-rows.push(resultRow);
-
-
-var tableView = Titanium.UI.createTableView({
-		data: rows, 
-		style: Titanium.UI.iPhone.TableViewStyle.PLAIN,
-		separatorStyle: 0, 
-		separatorColor: 'transparent',
-		backgroundColor:'transparent',
-		height:'auto',
-		left: 5,
-		top: 10
-	});
-
-win.add(tableView);
+win.add(resultRow);
 
 
 //********** Calculate ****************************
@@ -224,17 +232,6 @@ var val3 = parseFloat(var3.value.replace(',', '.'));
 var val4 = parseFloat(var4.value.replace(',', '.'));
 var val5 = parseFloat(var5.value.replace(',', '.'));
 var val6 = parseFloat(var6.value.replace(',', '.'));
-/*
-var val1 = 9.455;
-var val2= 8.235;
-var val3=0.000004236;
-var val4=0.156;
-
-var val5=457.5;
-
-var val6=210;
-*/
-
 
 var m1 = Math.pow(val1,2);
 var m2 = (((((Math.pow(val1,2))-(Math.pow(val2,2))))*val6)/val5);
@@ -263,13 +260,6 @@ win.addEventListener("click", function()
     var6.blur();
 
 });
-function createTableViewRow(height, selBgColor, layout){
-	return Ti.UI.createTableViewRow({
-		height: height,
-		layout: layout,
-		selectedBackgroundColor: selBgColor
-	});
-}
 
 //***************** ABOUT WINDOW ***********************
 

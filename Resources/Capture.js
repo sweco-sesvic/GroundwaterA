@@ -11,7 +11,11 @@ var rows = [];
 
 
 //****DESCRIPTION LABEL*****
-var descRow = createTableViewRow('auto', 'transparent', 'absolute');
+var descRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var descLabel = Titanium.UI.createLabel({
 	text: "This application calculates three capture zone main measures from pumping in a sloping unconfined aquifer",
 	font:{fontSize:14,fontFamily:'Helvetica Neue'},
@@ -20,12 +24,15 @@ var descLabel = Titanium.UI.createLabel({
 });	
 
 descRow.add(descLabel);
-rows.push(descRow);
+win.add(descRow);
 
     
 //****************** INPUT FIELDS *******************
 
-var pumpingRateRow = createTableViewRow('auto', 'transparent', 'absolute');
+var pumpingRateRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 
 var lbl1 = Titanium.UI.createLabel({
 	text: 'Pumping rate (m³/s):',
@@ -44,11 +51,15 @@ var var1 = Titanium.UI.createTextField({
         width:130,
         right: 5
 });
-pumpingRateRow.height = rowHeight;
-pumpingRateRow.add(var1);
-rows.push(pumpingRateRow);
 
-var transmissivityRow = createTableViewRow('auto', 'transparent', 'absolute');
+pumpingRateRow.add(var1);
+win.add(pumpingRateRow);
+
+var transmissivityRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var lbl2 = Titanium.UI.createLabel({
 	text: 'Transmissivity (m²/s):',	
 	left: 5,
@@ -66,11 +77,15 @@ var var2 = Titanium.UI.createTextField({
 		right: 5,
 		width: 130
     });
-transmissivityRow.height = rowHeight;
-transmissivityRow.add(var2);
-rows.push(transmissivityRow);
 
-var hydrailicRow = createTableViewRow('auto', 'transparent', 'absolute');
+transmissivityRow.add(var2);
+win.add(transmissivityRow);
+
+var hydrailicRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var lbl3 = Titanium.UI.createLabel({
 	text: 'Hydraulic gradient (-):',  
 	left: 5,
@@ -88,13 +103,15 @@ var var3 = Titanium.UI.createTextField({
         width: 130,
         right: 5
     });
-
-hydrailicRow.height = rowHeight;    
+    
 hydrailicRow.add(var3);
-rows.push(hydrailicRow);    
+win.add(hydrailicRow);    
 
 //******************** CALCULATEBTN************************** 
-var calcRow = createTableViewRow(75, 'transparent', 'absolute');
+var calcRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var calculateBtn = Titanium.UI.createButton({
 	title:'Calculate',
 	width:200,
@@ -103,14 +120,19 @@ var calculateBtn = Titanium.UI.createButton({
 });    
 
 calcRow.add(calculateBtn);
-rows.push(calcRow);
+win.add(calcRow);
+
 calculateBtn.addEventListener('click', function()
 {
 	Calculate();
 });
 
 //***********************************************************
-var resultHeaderRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultHeaderRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 resultHeaderRow.backgroundColor = '#909FB9';
 var resultHeaderLbl = Titanium.UI.createLabel({
 	text: 'Result:',
@@ -119,9 +141,13 @@ var resultHeaderLbl = Titanium.UI.createLabel({
 	left: 5
 });	
 resultHeaderRow.add(resultHeaderLbl);
-rows.push(resultHeaderRow);
+win.add(resultHeaderRow);
 
-var resultRow1 = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultRow1 = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+ 
 var resultLbl1 = Titanium.UI.createLabel({
 	text: 'Maximum upstream width (m) :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -129,11 +155,14 @@ var resultLbl1 = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultRow1.height = rowHeight;
-resultRow1.add(resultLbl1);
-rows.push(resultRow1);
 
-var resultRow2 = createTableViewRow('auto', 'transparent', 'absolute'); 
+resultRow1.add(resultLbl1);
+win.add(resultRow1);
+
+var resultRow2 = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var resultLbl2 = Titanium.UI.createLabel({
 	text: 'Width at well location (m) :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -141,11 +170,14 @@ var resultLbl2 = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultRow2.height = rowHeight;
-resultRow2.add(resultLbl2);
-rows.push(resultRow2);
 
-var resultRow3 = createTableViewRow('auto', 'transparent', 'absolute'); 
+resultRow2.add(resultLbl2);
+win.add(resultRow2);
+
+var resultRow3 = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var resultLbl3 = Titanium.UI.createLabel({
 	text: 'Distance to stagnation point (m) :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -153,23 +185,9 @@ var resultLbl3 = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultRow3.height = rowHeight;
+
 resultRow3.add(resultLbl3);
-rows.push(resultRow3);
-
-
-var tableView = Titanium.UI.createTableView({
-		data: rows, 
-		style: Titanium.UI.iPhone.TableViewStyle.PLAIN,
-		separatorStyle: 0, 
-		separatorColor: 'transparent',
-		backgroundColor:'transparent',
-		height:'auto',
-		left: 5,
-		top: 10
-	});
-
-win.add(tableView);			
+win.add(resultRow3);		
 
 
 //********** Calculate ****************************
@@ -214,13 +232,6 @@ win.addEventListener("click", function()
     var3.blur();
 
 });
-function createTableViewRow(height, selBgColor, layout){
-	return Ti.UI.createTableViewRow({
-		height: height,
-		layout: layout,
-		selectedBackgroundColor: selBgColor
-	});
-}
 
 //***************** ABOUT WINDOW ***********************
 

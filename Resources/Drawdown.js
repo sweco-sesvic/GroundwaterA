@@ -12,7 +12,11 @@ var rows = [];
 
 
 //****DESCRIPTION LABEL*****
-var descRow = createTableViewRow('auto', 'transparent', 'absolute');
+var descRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var descLabel = Titanium.UI.createLabel({
 	text: "This application calculates the drawdown in a well situated in a confined aquifer using Thiem's equation.",
 	font:{fontSize:14,fontFamily:'Helvetica Neue'},
@@ -21,12 +25,15 @@ var descLabel = Titanium.UI.createLabel({
 });	
 
 descRow.add(descLabel);
-rows.push(descRow);
+win.add(descRow);
 
     
 //****************** INPUT FIELDS *******************
 
-var pumpingRateRow = createTableViewRow('auto', 'transparent', 'absolute');
+var pumpingRateRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 
 var lbl1 = Titanium.UI.createLabel({
 	text: 'Pumping rate (m³/s):',
@@ -45,11 +52,14 @@ var var1 = Titanium.UI.createTextField({
         width:130,
         right: 5
 });
-pumpingRateRow.height = rowHeight;
 pumpingRateRow.add(var1);
-rows.push(pumpingRateRow);
+win.add(pumpingRateRow);
 
-var transmissivityRow = createTableViewRow('auto', 'transparent', 'absolute');
+var transmissivityRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
+
 var lbl2 = Titanium.UI.createLabel({
 	text: 'Transmissivity (m²/s):',
 	left: 5,
@@ -68,11 +78,13 @@ var var2 = Titanium.UI.createTextField({
 		width: 130
     });
 
-transmissivityRow.height = rowHeight;
 transmissivityRow.add(var2);
-rows.push(transmissivityRow);
+win.add(transmissivityRow);
 
-var influenceRow = createTableViewRow('auto', 'transparent', 'absolute');
+var influenceRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl3 = Titanium.UI.createLabel({
 	text: 'Influence radius (m):',
 	left: 5,
@@ -89,12 +101,14 @@ var var3 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 130,
         right: 5
-    });
-influenceRow.height = rowHeight;    
+    });    
 influenceRow.add(var3);
-rows.push(influenceRow);    
+win.add(influenceRow);    
 
-var wellRadiusRow = createTableViewRow('auto', 'transparent', 'absolute');
+var wellRadiusRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl4 = Titanium.UI.createLabel({
 	text: 'Well radius (m):',
 	left: 5,
@@ -112,12 +126,13 @@ var var4 = Titanium.UI.createTextField({
         width: 130,
         right: 5
     });
-wellRadiusRow.height = rowHeight;
 wellRadiusRow.add(var4);
-rows.push(wellRadiusRow);
+win.add(wellRadiusRow);
 
-
-var skinFactorRow = createTableViewRow('auto', 'transparent', 'absolute');
+var skinFactorRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var lbl5 = Titanium.UI.createLabel({
 	text: 'Skin factor (-):',
 	left: 5,
@@ -134,14 +149,16 @@ var var5 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
         width: 130,
         right: 5
-    });
-skinFactorRow.height = rowHeight;    
+    });  
 skinFactorRow.add(var5);
-rows.push(skinFactorRow);    
+win.add(skinFactorRow);    
 
 
 //******************** CALCULATEBTN************************** 
-var calcRow = createTableViewRow(75, 'transparent', 'absolute');
+var calcRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 var calculateBtn = Titanium.UI.createButton({
 	title:'Calculate',
 	width:200,
@@ -150,14 +167,18 @@ var calculateBtn = Titanium.UI.createButton({
 });    
 
 calcRow.add(calculateBtn);
-rows.push(calcRow);
+win.add(calcRow);
+
 calculateBtn.addEventListener('click', function()
 {
 	Calculate();
 });
 
 //***********************************************************
-var resultHeaderRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultHeaderRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+});
 resultHeaderRow.backgroundColor = '#909FB9';
 var resultHeaderLbl = Titanium.UI.createLabel({
 	text: 'Result:',
@@ -168,7 +189,10 @@ var resultHeaderLbl = Titanium.UI.createLabel({
 resultHeaderRow.add(resultHeaderLbl);
 rows.push(resultHeaderRow);
 
-var resultRow = createTableViewRow('auto', 'transparent', 'absolute'); 
+var resultRow = Titanium.UI.createView({
+	width: '100%',
+	height: Ti.UI.SIZE
+}); 
 var resultLbl = Titanium.UI.createLabel({
 	text: 'Drawdown (m) :',
 	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -176,25 +200,8 @@ var resultLbl = Titanium.UI.createLabel({
 	width: 300,
 	left: 5
 });	
-resultRow.height = rowHeight;
 resultRow.add(resultLbl);
-rows.push(resultRow);
-
-
-var tableView = Titanium.UI.createTableView({
-		data: rows, 
-		//style: Titanium.UI.iPhone.TableViewStyle.PLAIN,
-		separatorStyle: 0, 
-		separatorColor: 'transparent',
-		backgroundColor:'transparent',
-		height:'auto',
-		left: 5,
-		top: 10
-	});
-
-win.add(tableView);
-
-
+win.add(resultRow);
 
 //********** Calculate ****************************
 function Calculate()
@@ -225,13 +232,6 @@ win.addEventListener("click", function()
     var5.blur();
 
 });
-function createTableViewRow(height, selBgColor, layout){
-	return Ti.UI.createTableViewRow({
-		height: height,
-		layout: layout,
-		selectedBackgroundColor: selBgColor
-	});
-}
 
 //***************** ABOUT WINDOW ***********************
 
