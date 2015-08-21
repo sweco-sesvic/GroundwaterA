@@ -23,7 +23,6 @@ var descLabel = Titanium.UI.createLabel({
 });	
 
 descRow.add(descLabel);
-//rows.push(descRow);
 win.add(descRow);
     
 //****************** INPUT FIELDS *******************
@@ -48,9 +47,7 @@ var var1 = Titanium.UI.createTextField({
         width:130,
         right: 5
 });
-//soilStiffnessRow.height = rowHeight;
 soilStiffnessRow.add(var1);
-//rows.push(soilStiffnessRow);
 win.add(soilStiffnessRow);
 
 var soilLayerThicknessRow = Titanium.UI.createView({
@@ -75,9 +72,7 @@ var var2 = Titanium.UI.createTextField({
 		right: 5,
 		width: 130
     });
-//soilLayerThicknessRow.height = rowHeight;
 soilLayerThicknessRow.add(var2);
-//rows.push(soilLayerThicknessRow);
 win.add(soilLayerThicknessRow);
 
 var drawDownRow = Titanium.UI.createView({
@@ -102,10 +97,8 @@ var var3 = Titanium.UI.createTextField({
         width: 130,
         right: 5
     });
-
-//drawDownRow.height = rowHeight;    
+ 
 drawDownRow.add(var3);
-//rows.push(drawDownRow);  
 win.add(drawDownRow);  
 
 //******************** CALCULATEBTN************************** 
@@ -143,7 +136,6 @@ var resultHeaderLbl = Titanium.UI.createLabel({
 	left: 5
 });	
 resultHeaderRow.add(resultHeaderLbl);
-//rows.push(resultHeaderRow);
 win.add(resultHeaderRow);
 
 var resultRow = Titanium.UI.createView({
@@ -161,21 +153,6 @@ var resultLbl = Titanium.UI.createLabel({
 
 resultRow.add(resultLbl);
 win.add(resultRow);
-
-// 
-// var tableView = Titanium.UI.createTableView({
-		// data: rows, 
-		// //style: Titanium.UI.iPhone.TableViewStyle.PLAIN,
-		// separatorStyle: 0, 
-		// separatorColor: 'transparent',
-		// backgroundColor:'transparent',
-		// height:'auto',
-		// left: 5,
-		// tosp: 10
-	// });
-// 
-// 
-// win.add(tableView);			
 
 //********** Calculate ****************************
 function Calculate()
@@ -203,13 +180,6 @@ win.addEventListener("click", function()
 
 });
 
-// function createTableViewRow(height, selBgColor, layout){
-	// return Ti.UI.createTableViewRow({
-		// height: height,
-		// layout: layout,
-		// selectedBackgroundColor: selBgColor
-	// });
-// }
 
 //***************** ABOUT WINDOW ***********************
 

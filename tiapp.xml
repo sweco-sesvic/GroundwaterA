@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>com.groundandroid</id>
+    <id>com.groundwater</id>
     <name>groundandroid</name>
     <version>1.0</version>
     <publisher>sandravictorin</publisher>
-    <url>http://com.groundandroid</url>
+    <url>http://com.groundwater</url>
     <description>undefined</description>
     <copyright>2015 by sandravictorin</copyright>
     <icon>appicon.png</icon>
