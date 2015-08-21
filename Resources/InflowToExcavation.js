@@ -40,15 +40,16 @@ var lbl0 = Titanium.UI.createLabel({
 });
 estimatedInfluenceRow.add(lbl0);
 
-var var0 = Titanium.UI.createTextField({
+var var0 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width:110,
-        right: 5
-});
+		right: 5,
+		width: 130,
+        softKeyboardOnFocus : Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+    });
 estimatedInfluenceRow.add(var0);
 win.add(estimatedInfluenceRow);
 
@@ -65,15 +66,15 @@ var lbl1 = Titanium.UI.createLabel({
 });
 radiusOfExcavationRow.add(lbl1);
 
-var var1 = Titanium.UI.createTextField({
+var var1 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width:110,
-        right: 5
-});
+		right: 5,
+		width: 130
+    });
 radiusOfExcavationRow.add(var1);
 win.add(radiusOfExcavationRow);
 
@@ -90,14 +91,14 @@ var lbl2 = Titanium.UI.createLabel({
 });
 waterHeadInfluenceRow.add(lbl2);
 
-var var2 = Titanium.UI.createTextField({
+var var2 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
-		width: 110
+		width: 130
     });   
 waterHeadInfluenceRow.add(var2);
 win.add(waterHeadInfluenceRow);
@@ -115,15 +116,15 @@ var lbl3 = Titanium.UI.createLabel({
 });
 waterheadCentreRow.add(lbl3);
 
-var var3 = Titanium.UI.createTextField({
+var var3 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 110,
-        right: 5
-    }); 
+		right: 5,
+		width: 130
+    });
 waterheadCentreRow.add(var3);
 win.add(waterheadCentreRow);    
 
@@ -139,15 +140,15 @@ var lbl4 = Titanium.UI.createLabel({
 });
 hydraulicConductivityRow.add(lbl4);
 
-var var4 = Titanium.UI.createTextField({
+var var4 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 110,
-        right: 5
-    });   
+		right: 5,
+		width: 130
+    });
 hydraulicConductivityRow.add(var4);
 win.add(hydraulicConductivityRow);
 
@@ -228,15 +229,7 @@ if (isNaN(resultRounded))
 		resultLbl.text = 'The estimated inflow Q is (m3/s): '+resultRounded+'';
 	}
 }
-win.addEventListener("click", function()
-{
-	var0.blur();
-    var1.blur();
-    var2.blur();
-    var3.blur();
-    var4.blur();
 
-});
 
 //***************** ABOUT WINDOW ***********************
 

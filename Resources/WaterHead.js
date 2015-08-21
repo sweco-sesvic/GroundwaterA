@@ -40,15 +40,16 @@ var lbl1 = Titanium.UI.createLabel({
 });
 waterHeadUpstreamRow.add(lbl1);
 
-var var1 = Titanium.UI.createTextField({
+var var1 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width:110,
-        right: 5
-});
+		right: 5,
+		width: 130,
+        softKeyboardOnFocus : Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+    });
 waterHeadUpstreamRow.add(var1);
 win.add(waterHeadUpstreamRow);
 
@@ -64,15 +65,15 @@ var lbl2 = Titanium.UI.createLabel({
 });
 waterHeadDownstreamRow.add(lbl2);
 
-var var2 = Titanium.UI.createTextField({
+var var2 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
-		width: 110
-    });    
+		width: 130
+    });  
 waterHeadDownstreamRow.add(var2);
 win.add(waterHeadDownstreamRow);
 
@@ -88,14 +89,14 @@ var lbl3 = Titanium.UI.createLabel({
 });
 HydraukicConductivityRow.add(lbl3);
 
-var var3 = Titanium.UI.createTextField({
+var var3 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 110,
-        right: 5
+		right: 5,
+		width: 130
     });
 HydraukicConductivityRow.add(var3);
 win.add(HydraukicConductivityRow);    
@@ -112,15 +113,15 @@ var lbl4 = Titanium.UI.createLabel({
 });
 GroundwaterRechargeRow.add(lbl4);
 
-var var4 = Titanium.UI.createTextField({
+var var4 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 110,
-        right: 5
-    });  
+		right: 5,
+		width: 130
+    }); 
 GroundwaterRechargeRow.add(var4);
 win.add(GroundwaterRechargeRow);
 
@@ -136,15 +137,15 @@ var lbl5 = Titanium.UI.createLabel({
 });
 DistanceBetweenTrenchesRow.add(lbl5);
 
-var var5 = Titanium.UI.createTextField({
+var var5 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 110,
-        right: 5
-    });   
+		right: 5,
+		width: 130
+    });
 DistanceBetweenTrenchesRow.add(var5);
 win.add(DistanceBetweenTrenchesRow);
 
@@ -160,15 +161,15 @@ var lbl6 = Titanium.UI.createLabel({
 });
 distanceToDemandedWaterRow.add(lbl6);
 
-var var6 = Titanium.UI.createTextField({
+var var6 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 110,
-        right: 5
-    });   
+		right: 5,
+		width: 130
+    });  
 distanceToDemandedWaterRow.add(var6);
 win.add(distanceToDemandedWaterRow);    
 
@@ -250,16 +251,6 @@ if (isNaN(resultRounded))
 		resultLbl.text = 'The waterhead h at x is (m): '+resultRounded+'';
 	}
 }
-win.addEventListener("click", function()
-{
-    var1.blur();
-    var2.blur();
-    var3.blur();
-    var4.blur();
-    var5.blur();
-    var6.blur();
-
-});
 
 //***************** ABOUT WINDOW ***********************
 

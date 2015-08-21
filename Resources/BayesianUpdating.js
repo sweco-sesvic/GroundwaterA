@@ -24,7 +24,6 @@ var descLabel = Titanium.UI.createLabel({
 });	
 
 descRow.add(descLabel);
-// rows.push(descRow);
 win.add(descRow);
     
 //****************** INPUT FIELDS *******************
@@ -42,15 +41,16 @@ var lbl1 = Titanium.UI.createLabel({
 });
 populationMeanEstimateRow.add(lbl1);
 
-var var1 = Titanium.UI.createTextField({
+var var1 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
+        // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
+        keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width:110,
-        right: 5,
-        // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
-        keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION
-});
+		right: 5,
+		width: 130,
+        softKeyboardOnFocus : Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+    });
 populationMeanEstimateRow.add(var1);
 win.add(populationMeanEstimateRow);
 
@@ -67,14 +67,14 @@ var lbl2 = Titanium.UI.createLabel({
 });
 populationStandardDeviationRow.add(lbl2);
 
-var var2 = Titanium.UI.createTextField({
+var var2 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
-		width: 110
+		width: 130
     });
 
 populationStandardDeviationRow.add(var2);
@@ -93,14 +93,14 @@ var lbl3 = Titanium.UI.createLabel({
 });
 sampleMeanValueRow.add(lbl3);
 
-var var3 = Titanium.UI.createTextField({
+var var3 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 110,
-        right: 5
+		right: 5,
+		width: 130
     });
 
 sampleMeanValueRow.add(var3);
@@ -119,16 +119,15 @@ var lbl4 = Titanium.UI.createLabel({
 });
 sampleStandarDeviationRow.add(lbl4);
 
-var var4 = Titanium.UI.createTextField({
+var var4 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 110,
-        right: 5
+		right: 5,
+		width: 130
     });
-  
 sampleStandarDeviationRow.add(var4);
 win.add(sampleStandarDeviationRow); 
 
@@ -145,14 +144,14 @@ var lbl5 = Titanium.UI.createLabel({
 });
 sampleSizeRow.add(lbl5);
 
-var var5 = Titanium.UI.createTextField({
+var var5 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 110,
-        right: 5
+		right: 5,
+		width: 130
     });
    
 sampleSizeRow.add(var5);
@@ -264,16 +263,6 @@ else
 
 	}
 }
-win.addEventListener("click", function()
-{
-    var1.blur();
-    var2.blur();
-    var3.blur();
-    var4.blur();
-    var5.blur();
-
-
-});
 
 //***************** ABOUT WINDOW ***********************
 

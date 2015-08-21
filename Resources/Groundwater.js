@@ -42,15 +42,16 @@ var lbl1 = Titanium.UI.createLabel({
 });
 pumpingRateRow.add(lbl1);
 
-var var1 = Titanium.UI.createTextField({
+var var1 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width:130,
-        right: 5
-});
+		right: 5,
+		width: 130,
+        softKeyboardOnFocus : Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+    });
 pumpingRateRow.add(var1);
 win.add(pumpingRateRow);
 
@@ -66,7 +67,7 @@ var lbl2 = Titanium.UI.createLabel({
 });
 effectivePorosityRow.add(lbl2);
 
-var var2 = Titanium.UI.createTextField({
+var var2 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
@@ -74,7 +75,7 @@ var var2 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
 		width: 130
-    });    
+    });   
 effectivePorosityRow.add(var2);
 win.add(effectivePorosityRow);
 
@@ -90,15 +91,15 @@ var lbl3 = Titanium.UI.createLabel({
 });
 arealRecharge.add(lbl3);
 
-var var3 = Titanium.UI.createTextField({
+var var3 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 130,
-        right: 5
-    });   
+		right: 5,
+		width: 130
+    });
 arealRecharge.add(var3);
 win.add(arealRecharge);    
 
@@ -114,15 +115,15 @@ var lbl4 = Titanium.UI.createLabel({
 });
 saturatedThicknessRow.add(lbl4);
 
-var var4 = Titanium.UI.createTextField({
+var var4 =Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 130,
-        right: 5
-    });    
+		right: 5,
+		width: 130
+    });
 saturatedThicknessRow.add(var4);
 win.add(saturatedThicknessRow);
 
@@ -139,15 +140,15 @@ var lbl5 = Titanium.UI.createLabel({
 });
 timeRow.add(lbl5);
 
-var var5 = Titanium.UI.createTextField({
+var var5 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 130,
-        right: 5
-    });   
+		right: 5,
+		width: 130
+    });
 timeRow.add(var5);
 win.add(timeRow);    
 
@@ -225,15 +226,6 @@ if (isNaN(resultRounded))
 		resultLbl.text = 'Radius of capture (m) : '+resultRounded+'';
 	}
 }
-win.addEventListener("click", function()
-{
-    var1.blur();
-    var2.blur();
-    var3.blur();
-    var4.blur();
-    var5.blur();
-
-});
 
 //***************** ABOUT WINDOW ***********************
 

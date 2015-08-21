@@ -40,15 +40,16 @@ var lbl1 = Titanium.UI.createLabel({
 });
 aquiferHeightRow.add(lbl1);
 
-var var1 = Titanium.UI.createTextField({
+var var1 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width:110,
-        right: 5
-});
+		right: 5,
+		width: 130,
+        softKeyboardOnFocus : Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+    });
 aquiferHeightRow.add(var1);
 win.add(aquiferHeightRow);
 
@@ -64,15 +65,15 @@ var lbl2 = Titanium.UI.createLabel({
 });
 pileSheetDepthRow.add(lbl2);
 
-var var2 = Titanium.UI.createTextField({
+var var2 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
-		width: 110
-    }); 
+		width: 130
+    });
 pileSheetDepthRow.add(var2);
 win.add(pileSheetDepthRow);
 
@@ -146,12 +147,6 @@ if (isNaN(resultRounded))
 		resultLbl.text = 'The approximate exit gradient i(max) at toe\n(-): '+resultRounded+'';
 	}
 }
-win.addEventListener("click", function()
-{
-    var1.blur();
-    var2.blur();
-
-});
 
 //***************** ABOUT WINDOW ***********************
 

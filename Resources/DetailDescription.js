@@ -9,7 +9,7 @@ win.titleControl = Ti.UI.createLabel({ text: win.title, color: 'white' });
 var textColor ='#FFF';
 
 var scrolly = Titanium.UI.createScrollView({
-	bottom: 65,
+	bottom: 67,
 	top:0,
 	showVerticalScrollIndicator:true,
 	showHorizontalScrollIndicator:false,

@@ -42,15 +42,16 @@ var lbl1 = Titanium.UI.createLabel({
 });
 d10row.add(lbl1);
 
-var var1 = Titanium.UI.createTextField({
+var var1 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width:130,
-        right: 5
-});
+		right: 5,
+		width: 130,
+        softKeyboardOnFocus : Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+    });
 d10row.add(var1);
 win.add(d10row);
 
@@ -66,7 +67,7 @@ var lbl2 = Titanium.UI.createLabel({
 });
 d60row.add(lbl2);
 
-var var2 = Titanium.UI.createTextField({
+var var2 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
@@ -74,7 +75,7 @@ var var2 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
 		width: 130
-    }); 
+    });
 d60row.add(var2);
 win.add(d60row);
   
@@ -170,12 +171,6 @@ function Calculate()
 
 }
 
-win.addEventListener("click", function()
-{
-    var1.blur();
-    var2.blur();
-
-});
 
 //***************** ABOUT WINDOW ***********************
 

@@ -40,15 +40,16 @@ var lbl1 = Titanium.UI.createLabel({
 });
 pumpingrateRow.add(lbl1);
 
-var var1 = Titanium.UI.createTextField({
+var var1 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width:130,
-        right: 5
-});
+		right: 5,
+		width: 130,
+        softKeyboardOnFocus : Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+    });
 
 pumpingrateRow.add(var1);
 win.add(pumpingrateRow);
@@ -65,7 +66,7 @@ var lbl2 = Titanium.UI.createLabel({
 });
 transmissivityRow.add(lbl2);
 
-var var2 = Titanium.UI.createTextField({
+var var2 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
@@ -73,7 +74,7 @@ var var2 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
 		width: 130
-    });    
+    });
 transmissivityRow.add(var2);
 win.add(transmissivityRow);
 
@@ -89,15 +90,15 @@ var lbl3 = Titanium.UI.createLabel({
 });
 estimatedInfluenceRow.add(lbl3);
 
-var var3 = Titanium.UI.createTextField({
+var var3 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 130,
-        right: 5
-    });   
+		right: 5,
+		width: 130
+    }); 
 estimatedInfluenceRow.add(var3);
 win.add(estimatedInfluenceRow);    
 
@@ -113,14 +114,14 @@ var lbl4 = Titanium.UI.createLabel({
 });
 distanceFromPumpingArea.add(lbl4);
 
-var var4 = Titanium.UI.createTextField({
+var var4 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 130,
-        right: 5
+		right: 5,
+		width: 130
     });    
 distanceFromPumpingArea.add(var4);
 win.add(distanceFromPumpingArea);
@@ -137,15 +138,15 @@ var lbl5 = Titanium.UI.createLabel({
 });
 soilLayerThicknessRow.add(lbl5);
 
-var var5 = Titanium.UI.createTextField({
+var var5 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 130,
-        right: 5
-    });   
+		right: 5,
+		width: 130
+    });  
 soilLayerThicknessRow.add(var5);
 win.add(soilLayerThicknessRow);    
 
@@ -161,14 +162,14 @@ var lbl6 = Titanium.UI.createLabel({
 });
 oneDimensionalSoilRow.add(lbl6);
 
-var var6 = Titanium.UI.createTextField({
+var var6 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 130,
-        right: 5
+		right: 5,
+		width: 130
     });   
 oneDimensionalSoilRow.add(var6);
 win.add(oneDimensionalSoilRow);
@@ -246,16 +247,6 @@ var resultRounded = Math.round(result*1)/1;
 			resultLbl.text = 'The magnitude of settlement at POI is (mm): '+resultRounded+'';
 		}
 }
-
-win.addEventListener("click", function()
-{
-    var1.blur();
-    var2.blur();
-    var3.blur();
-    var4.blur();
-    var5.blur();
-    var6.blur();
-});
 
 //***************** ABOUT WINDOW ***********************
 

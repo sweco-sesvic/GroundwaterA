@@ -1,1 +1,1 @@
-/Users/sesvic/GroundwaterA/Resources/About.js
+/Users/sesvic/GroundwaterAndroid/Resources/About.js

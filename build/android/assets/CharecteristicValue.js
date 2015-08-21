@@ -1,1 +1,1 @@
-/Users/sesvic/GroundwaterA/Resources/CharecteristicValue.js
+/Users/sesvic/GroundwaterAndroid/Resources/CharecteristicValue.js

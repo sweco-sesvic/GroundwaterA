@@ -41,15 +41,16 @@ var lbl1 = Titanium.UI.createLabel({
 });
 aquiferRow.add(lbl1);
 
-var var1 = Titanium.UI.createTextField({
+var var1 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width:130,
-        right: 5
-});
+		right: 5,
+		width: 130,
+        softKeyboardOnFocus : Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+    });
 aquiferRow.add(var1);
 win.add(aquiferRow);
 
@@ -65,7 +66,7 @@ var lbl2 = Titanium.UI.createLabel({
 });
 rechargeRow.add(lbl2);
 
-var var2 = Titanium.UI.createTextField({
+var var2 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
@@ -73,7 +74,7 @@ var var2 = Titanium.UI.createTextField({
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
 		width: 130
-    }); 
+    });
 rechargeRow.add(var2);
 win.add(rechargeRow);
 
@@ -89,15 +90,15 @@ var lbl3 = Titanium.UI.createLabel({
 });
 effectivePorosityRow.add(lbl3);
 
-var var3 = Titanium.UI.createTextField({
+var var3 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 130,
-        right: 5
-    });   
+		right: 5,
+		width: 130
+    });  
 effectivePorosityRow.add(var3);
 win.add(effectivePorosityRow);    
 
@@ -113,15 +114,15 @@ var lbl4 = Titanium.UI.createLabel({
 });
 distanceFromWellRow.add(lbl4);
 
-var var4 = Titanium.UI.createTextField({
+var var4 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 130,
-        right: 5
-    });    
+		right: 5,
+		width: 130
+    });   
 distanceFromWellRow.add(var4);
 win.add(distanceFromWellRow);
 
@@ -137,14 +138,14 @@ var lbl5 = Titanium.UI.createLabel({
 });
 distanceFromPollutedRow.add(lbl5);
 
-var var5 = Titanium.UI.createTextField({
+var var5 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
         // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
         keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width: 130,
-        right: 5
+		right: 5,
+		width: 130
     });    
 distanceFromPollutedRow.add(var5);
 win.add(distanceFromPollutedRow);    
@@ -221,15 +222,6 @@ var resultRounded = Math.round(result*100)/100;
 			resultLbl.text = 'Mean travel time to well (yr) : '+resultRounded+'';
 		}
 }
-
-win.addEventListener("click", function()
-{
-    var1.blur();
-    var2.blur();
-    var3.blur();
-    var4.blur();
-    var5.blur();
-});
 
 
 //***************** ABOUT WINDOW ***********************
