@@ -3,10 +3,10 @@
     <id>com.swecogroup.gwtb</id>
     <name>Groundwater</name>
     <version>1.0</version>
-    <publisher>sandravictorin</publisher>
+    <publisher>Sweco Position AB</publisher>
     <url>http://com.groundwater</url>
     <description>undefined</description>
-    <copyright>2015 by sandravictorin</copyright>
+    <copyright>2015 by Sweco</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
