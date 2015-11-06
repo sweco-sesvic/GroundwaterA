@@ -144,7 +144,37 @@ var tableData = [
 			height: 68,			
 			color: 'white', 
 			id:'20'
-		}
+		}, 
+		{
+			title:'Inflow to long trench', 
+			font: {
+				fontSize: fontSize
+			},
+			hasChild: true, 
+			height: fieldHeight,			
+			color: textColor, 
+			id:'21'
+		}, 
+		{
+			title:'Influence Radius by Sichardt and Weber', 
+			font: {
+				fontSize: fontSize
+			},
+			hasChild: true, 
+			height: fieldHeight,			
+			color: textColor, 
+			id:'22'
+		}, 
+		{
+			title:'Inflow to tunnel', 
+			font: {
+				fontSize: fontSize
+			},
+			hasChild: true, 
+			height: fieldHeight,			
+			color: textColor, 
+			id:'23'
+		}  
 	];
 
 var table = Ti.UI.createTableView({
@@ -238,6 +268,18 @@ table.addEventListener('click', function (e) {
 	if (e.index =='19')
 	{
 		url = 'ReliabilityOfSystems.js';	
+	}
+	if (e.row.id =='20')
+	{
+		url = 'InflowToLongTrench.js';	
+	}
+	if (e.row.id =='21')
+	{
+		url = 'InfluenceRadius.js';	
+	}
+	if (e.row.id =='22')
+	{
+		url = 'InflowToTunnel.js';	
 	}
 	
    	var contentInfo = Titanium.UI.createWindow({
