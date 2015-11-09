@@ -16,7 +16,7 @@ var descRow = Titanium.UI.createView({
 });
 var descLabel = Titanium.UI.createLabel({
 	text: "A partially penetrating long trench down to a confined aquifer receives water from both sides of the trench.",
-	font:{fontSize:fontSize,fontFamily:'Helvetica Neue'},
+	font:{fontSize:14,fontFamily:'Helvetica Neue'},
 	color: textColor,
 	left: 5
 });	
@@ -34,20 +34,21 @@ var row1 = Titanium.UI.createView({
 var lbl0 = Titanium.UI.createLabel({
 	text: 'Linear length B of trench \n(m): ',
 	left: 5,
-	font:{fontSize:fontSize,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor
 });
 row1.add(lbl0);
 
-var var0 = Titanium.UI.createTextField({
+var var0 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
-        keyboardType: Titanium.UI.KEYBOARD_DECIMAL_PAD,
+        // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
+        keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width:110 + plusIpad,
-        height : fieldHeight,
-        right: 5
-});
+		right: 5,
+		width: 130,
+        softKeyboardOnFocus : Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+    });
 row1.add(var0);
 win.add(row1);
 
@@ -60,20 +61,21 @@ var row2 = Titanium.UI.createView({
 var lbl1 = Titanium.UI.createLabel({
 	text: 'Aquifer hydraulic \nconductivity K (m/s): ',
 	left: 5,
-	font:{fontSize:fontSize,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor
 });
 row2.add(lbl1);
 
-var var1 = Titanium.UI.createTextField({
+var var1 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
-        keyboardType: Titanium.UI.KEYBOARD_DECIMAL_PAD,
+        // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
+        keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width:110 + plusIpad,
-        height : fieldHeight,
-        right: 5
-});
+		right: 5,
+		width: 130,
+        softKeyboardOnFocus : Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+    });
 row2.add(var1);
 win.add(row2);
 
@@ -86,20 +88,21 @@ var row3 = Titanium.UI.createView({
 var lbl2 = Titanium.UI.createLabel({
 	text: 'Thickness of confined \naquifer D (m): ',
 	left: 5,
-	font:{fontSize:fontSize,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor
 });
 row3.add(lbl2);
 
-var var2 = Titanium.UI.createTextField({
+var var2 =  Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
-        keyboardType: Titanium.UI.KEYBOARD_DECIMAL_PAD,
+        // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
+        keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
-		width: 110 + plusIpad,
-        height : fieldHeight
-});   
+		width: 130,
+        softKeyboardOnFocus : Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+    });
 row3.add(var2);
 win.add(row3);
 
@@ -112,20 +115,21 @@ var row4 = Titanium.UI.createView({
 var lbl3 = Titanium.UI.createLabel({
 	text: 'Drawdown s (m): ',
 	left: 5,
-	font:{fontSize:fontSize,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor
 });
 row4.add(lbl3);
 
-var var3 = Titanium.UI.createTextField({
+var var3 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
-        keyboardType: Titanium.UI.KEYBOARD_DECIMAL_PAD,
+        // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
+        keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
-		width: 110 + plusIpad,
-        height : fieldHeight
-    });  
+		width: 130,
+        softKeyboardOnFocus : Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+    });
 row4.add(var3);
 win.add(row4);
 
@@ -138,19 +142,20 @@ var row5 = Titanium.UI.createView({
 var lbl4 = Titanium.UI.createLabel({
 	text: 'Depth of penetration of \ntrench into aquifer p (m): ',
 	left: 5,
-	font:{fontSize:fontSize,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor
 });
 row5.add(lbl4);
 
-var var4 = Titanium.UI.createTextField({
+var var4 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
-        keyboardType: Titanium.UI.KEYBOARD_DECIMAL_PAD,
+        // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
+        keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
-		width: 110 + plusIpad,
-        height : fieldHeight
+		width: 130,
+        softKeyboardOnFocus : Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
     });
 row5.add(var4);
 win.add(row5);
@@ -186,7 +191,7 @@ resultHeaderRow.backgroundColor = '#909FB9';
 
 var resultHeaderLbl = Titanium.UI.createLabel({
 	text: 'Result:',
-	font:{fontSize:bigFontSize,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	font:{fontSize:18,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: 'black',
 	left: 5
 });	
@@ -200,7 +205,7 @@ var resultRow1 = Titanium.UI.createView({
 
 var resultLbl1 = Titanium.UI.createLabel({
 	text: 'Steady-state inflow (L/s): ',
-	font:{fontSize:fontSize,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor,
 	width: 300,
 	left: 5
@@ -216,7 +221,7 @@ var resultRow2 = Titanium.UI.createView({
 
 var resultLbl2 = Titanium.UI.createLabel({
 	text: 'Approximate distance of influence (m): ',
-	font:{fontSize:fontSize,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor,
 	width: 300,
 	left: 5
@@ -280,12 +285,12 @@ win.activity.onCreateOptionsMenu = function(e) {
         		+ '\n\nThe formula is in essence Darcy´s law or Q=2·T·i·B, where T=K·D, B=B and i ≈ s/L, flow from two sides.'
         		+ '\n\nThe partial penetration is accounted for by multiplying a factor [0-2] to the thickness D and adding it to the distance of influence, thus L becomes L´.'
         		+ '\n\nQ = (2·K·D·B·s)/(L+λ*D)'
-        		+ '\nλ ≈ [1,44-1,33·√(p/d)]2'
+        		+ '\nλ ≈ [1,44-1,33·√(p/d)]²'
         		+ '\n\nThe crucial parameter, besides K, is distance of influence L. L can be estimated as:'
         		+ '\nL ≈ c·3000·s·√K (Sichardt), where c ≈ 0,5-0,7.'
         		+ '\n(here c=0,6).'
         		+ '\n\nLimitations in calculation, see:'
-        		+ '\nCashman & Preene, Groundwater Lowering in Construction, A practical guide to Dewatering (ITALIC), CRC Press, 2013, table 7.1.'
+        		+ '\nCashman & Preene, Groundwater Lowering in Construction, A practical guide to Dewatering, CRC Press, 2013, table 7.1.'
      	});
      		
     	aboutWindow.open();

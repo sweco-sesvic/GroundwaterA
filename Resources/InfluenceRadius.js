@@ -17,8 +17,8 @@ var descRow = Titanium.UI.createView({
 	height: Ti.UI.SIZE
 });
 var descLabel = Titanium.UI.createLabel({
-	text: "Sichardt and Weber present two formulas to quickly estimate the size of the influence radius R0 from a production well with a drawdown.",
-	font:{fontSize:fontSize,fontFamily:'Helvetica Neue'},
+	text: "Sichardt and Weber present two formulas to quickly estimate the size of the influence radius R(0) from a production well with a drawdown.",
+	font:{fontSize:14,fontFamily:'Helvetica Neue'},
 	color: textColor,
 	left: 5
 });	
@@ -36,20 +36,21 @@ var estimatedDrawdownRow = Titanium.UI.createView({
 var lbl0 = Titanium.UI.createLabel({
 	text: 'Drawdown in aquifer, just \noutside the well s (m): ',
 	left: 5,
-	font:{fontSize:fontSize,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor
 });
 estimatedDrawdownRow.add(lbl0);
 
-var var0 = Titanium.UI.createTextField({
+var var0 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
-        keyboardType: Titanium.UI.KEYBOARD_DECIMAL_PAD,
+        // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
+        keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width:110 + plusIpad,
-        height : fieldHeight,
-        right: 5
-});
+		right: 5,
+		width: 130,
+        softKeyboardOnFocus : Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+    });
 estimatedDrawdownRow.add(var0);
 win.add(estimatedDrawdownRow);
 
@@ -62,20 +63,21 @@ var ConductivityRow = Titanium.UI.createView({
 var lbl1 = Titanium.UI.createLabel({
 	text: 'Aquifer hydraulic \nconductivity K (m/s): ',
 	left: 5,
-	font:{fontSize:fontSize,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor
 });
 ConductivityRow.add(lbl1);
 
-var var1 = Titanium.UI.createTextField({
+var var1 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
-        keyboardType: Titanium.UI.KEYBOARD_DECIMAL_PAD,
+        // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
+        keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
-        width:110 + plusIpad,
-        height : fieldHeight,
-        right: 5
-});
+		right: 5,
+		width: 130,
+        softKeyboardOnFocus : Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+    });
 ConductivityRow.add(var1);
 win.add(ConductivityRow);
 
@@ -88,20 +90,21 @@ var timeCalculationRow = Titanium.UI.createView({
 var lbl2 = Titanium.UI.createLabel({
 	text: 'Calculation time t (days): ',
 	left: 5,
-	font:{fontSize:fontSize,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor
 });
 timeCalculationRow.add(lbl2);
 
-var var2 = Titanium.UI.createTextField({
+var var2 = Ti.UI.createTextArea({
         borderStyle: Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
-        keyboardType: Titanium.UI.KEYBOARD_DECIMAL_PAD,
+        // keyboardType: Ti.UI.KEYBOARD_DECIMAL_PAD,
+        keyboardType: Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
         clearButtonMode: Titanium.UI.INPUT_BUTTONMODE_ONFOCUS,
         returnKeyType: Titanium.UI.RETURNKEY_DONE,
 		right: 5,
-		width: 110 + plusIpad,
-        height : fieldHeight
-    });   
+		width: 130,
+        softKeyboardOnFocus : Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+    }); 
 timeCalculationRow.add(var2);
 win.add(timeCalculationRow);
 
@@ -115,9 +118,7 @@ var calculateBtn = Titanium.UI.createButton({
 	title:'Calculate',
 	width:200,
 	color:'#B5CCEF',
-	font: {
-		fontSize: fontSize
-	}
+	backgroundColor: 'transparent'
 });    
 
 calcRow.add(calculateBtn);
@@ -138,7 +139,7 @@ resultHeaderRow.backgroundColor = '#909FB9';
 
 var resultHeaderLbl = Titanium.UI.createLabel({
 	text: 'Result:',
-	font:{fontSize:bigFontSize,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	font:{fontSize:18,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: 'black',
 	left: 5
 });	
@@ -151,10 +152,10 @@ var resultRow1 = Titanium.UI.createView({
 });
 
 var resultLbl1 = Titanium.UI.createLabel({
-	text: 'Sichardt: Approximate influence radius R0 (m): ',
-	font:{fontSize:fontSize,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	text: 'Sichardt: Approximate influence radius R(0) (m): ',
+	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor,
-	width: '90%',
+	width: 300,
 	left: 5
 });	
 resultRow1.add(resultLbl1);
@@ -167,10 +168,10 @@ var resultRow2 = Titanium.UI.createView({
 });
 
 var resultLbl2 = Titanium.UI.createLabel({
-	text: 'Weber: Approximate influence radius R0 (m): ',
-	font:{fontSize:fontSize,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	text: 'Weber: Approximate influence radius R(0) (m): ',
+	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor,
-	width: '90%',
+	width: 300,
 	left: 5
 });	
 resultRow2.add(resultLbl2);
@@ -184,9 +185,9 @@ var resultRow3 = Titanium.UI.createView({
 
 var resultLbl3 = Titanium.UI.createLabel({
 	text: 'Approximate time to reach steady state (days): ',
-	font:{fontSize:fontSize,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor,
-	width: '90%',
+	width: 300,
 	left: 5
 });	
 resultRow3.add(resultLbl3);
@@ -199,10 +200,10 @@ var resultRow4 = Titanium.UI.createView({
 }); 
 
 var resultLbl4 = Titanium.UI.createLabel({
-	text: 'Approximate mean influence radius R0 (m): ',
-	font:{fontSize:fontSize,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	text: 'Approximate mean influence radius R(0) (m): ',
+	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	color: textColor,
-	width: '90%',
+	width: 300,
 	left: 5
 });	
 resultRow4.add(resultLbl4);
@@ -250,10 +251,10 @@ function Calculate()
 	}
 	else 
 	{
-		resultLbl1.text = 'Sichardt: Approximate influence radius R0 (m): '+resultRounded1+'';
-		resultLbl2.text = 'Weber: Approximate influence radius R0 (m): '+resultRounded2+'';
+		resultLbl1.text = 'Sichardt: Approximate influence radius R(0) (m): '+resultRounded1+'';
+		resultLbl2.text = 'Weber: Approximate influence radius R(0) (m): '+resultRounded2+'';
 		resultLbl3.text = 'Approximate time to reach steady state (days):  '+resultRounded3+'';
-		resultLbl4.text = 'Approximate mean influence radius R0 (m): '+resultRounded3+''; 
+		resultLbl4.text = 'Approximate mean influence radius R(0) (m): '+resultRounded3+''; 
 	}
 }
 
@@ -273,14 +274,14 @@ win.activity.onCreateOptionsMenu = function(e) {
         var aboutWindow = Titanium.UI.createWindow({
         	title: 'Inflow to excavation',
         	url: 'DetailDescription.js',
-        	lblText: 'Sichardt and Weber present two formulas to quickly estimate the size of the influence radius R0 from a production well with a drawdown.' 
-					+ '\nThe formulas are however not their prime interest work, but mere an intermediate steps to calculate drawdown in a well. The Sichardt (<-ska vara understruket) formula is: R0 ≈ 3000·s·√K'
+        	lblText: 'Sichardt and Weber present two formulas to quickly estimate the size of the influence radius R(0) from a production well with a drawdown.' 
+					+ '\nThe formulas are however not their prime interest work, but mere an intermediate steps to calculate drawdown in a well. The Sichardt (<-ska vara understruket) formula is: R(0) ≈ 3000·s·√K'
 					+ '\n\nThe formula does not directly account for groundwater recharge, but indirectly do so by including the hydraulic conductivity K.'
 					+ '\nIt is valid for unconfined conditions. For high K-values, the formula may underestimate the influence radius. If not the drawdown is from a single well,' 
-					+ 'but from a line of wells, R0 is about 50-70 % of the result. The result is presented as powers of 10 meters, which still may be incorrect.'
+					+ 'but from a line of wells, R(0) is about 50-70 % of the result. The result is presented as powers of 10 meters, which still may be incorrect.'
 					+ '\n\nWeber presents an approximate solution, based on aquifer thickness H, hydraulic conductivity K, time t and two parameters c and b,' 
 					+ 'of which c is 2,8-3,5 and β is 0,14 for coarse soil and 0,42 for fine sand.'
-					+ '\n\nThe formula can be generalized to (s=H): R0 ≈ c·√(s·K·t/β)'
+					+ '\n\nThe formula can be generalized to (s=H): R(0) ≈ c·√(s·K·t/β)'
 					+ '\n\nThe result is presented as powers of 10 meters. Here is used: c=3 and β=0,4 (≈sand)'
 					+ '\n\nAn approximate estimate is presented of the time to reach steady state. Also this estimate is uncertain: t ≈ 4·s (days, when drawdown=s is in meters)'
 					+ '\n\nIt must be emphasized that the formulas only should be used for initial estimates, and are not correct to use for important statements or assessments! The error may be large.'
@@ -290,9 +291,9 @@ win.activity.onCreateOptionsMenu = function(e) {
 					+ '\n3. Recalculate'
 					+ '\n4. Use mean of Sichardt and Weber ((=Result #4)'
 					+ '\n\nSee, for instance:'
-					+ '\nThurner, Hydrogeologie (ITALIC), Springer-Verlag, 1967.'
-					+ '\nWeber, Die Rechweite von Grundwasserabsenkungen mittels Rohrbrunnen (ITALIC), Springer, 1928.'
-					+ '\nJohn Woodward, An Introduction to Geotechnical Processes (ITALIC), Spon Press,  2005, p. 24.'
+					+ '\nThurner, Hydrogeologie, Springer-Verlag, 1967.'
+					+ '\nWeber, Die Rechweite von Grundwasserabsenkungen mittels Rohrbrunnen, Springer, 1928.'
+					+ '\nJohn Woodward, An Introduction to Geotechnical Processes, Spon Press,  2005, p. 24.'
    		});
      		
     	aboutWindow.open();
@@ -300,39 +301,4 @@ win.activity.onCreateOptionsMenu = function(e) {
 };
 
 //****************************************************
-
-
-
-
-
-
-info.addEventListener('click', function (e) {
-    var detailInfo = Titanium.UI.createWindow({
-        title: 'Inflow to excavation',
-        url: 'DetailDescription.js',
-        backgroundColor: 'transparent',
-        barColor: '#000',
-        lblText: 'Sichardt and Weber present two formulas to quickly estimate the size of the influence radius R0 from a production well with a drawdown.' 
-					+ '\nThe formulas are however not their prime interest work, but mere an intermediate steps to calculate drawdown in a well. The Sichardt (<-ska vara understruket) formula is: R0 ≈ 3000·s·√K'
-					+ '\n\nThe formula does not directly account for groundwater recharge, but indirectly do so by including the hydraulic conductivity K.'
-					+ '\nIt is valid for unconfined conditions. For high K-values, the formula may underestimate the influence radius. If not the drawdown is from a single well,' 
-					+ 'but from a line of wells, R0 is about 50-70 % of the result. The result is presented as powers of 10 meters, which still may be incorrect.'
-					+ '\n\nWeber presents an approximate solution, based on aquifer thickness H, hydraulic conductivity K, time t and two parameters c and b,' 
-					+ 'of which c is 2,8-3,5 and β is 0,14 for coarse soil and 0,42 for fine sand.'
-					+ '\n\nThe formula can be generalized to (s=H): R0 ≈ c·√(s·K·t/β)'
-					+ '\n\nThe result is presented as powers of 10 meters. Here is used: c=3 and β=0,4 (≈sand)'
-					+ '\n\nAn approximate estimate is presented of the time to reach steady state. Also this estimate is uncertain: t ≈ 4·s (days, when drawdown=s is in meters)'
-					+ '\n\nIt must be emphasized that the formulas only should be used for initial estimates, and are not correct to use for important statements or assessments! The error may be large.'
-					+ '\nProcedure:'
-					+ '\n1. Estimate the time to reach steady state from drawdown in aquifer (=Result #3)'
-					+ '\n2. Use this figure as Entry #3, "Calculation time".'
-					+ '\n3. Recalculate'
-					+ '\n4. Use mean of Sichardt and Weber ((=Result #4)'
-					+ '\n\nSee, for instance:'
-					+ '\nThurner, Hydrogeologie (ITALIC), Springer-Verlag, 1967.'
-					+ '\nWeber, Die Rechweite von Grundwasserabsenkungen mittels Rohrbrunnen (ITALIC), Springer, 1928.'
-					+ '\nJohn Woodward, An Introduction to Geotechnical Processes (ITALIC), Spon Press,  2005, p. 24.'
-     });
-    Titanium.UI.currentTab.open(detailInfo, { animated: true });
-});
 

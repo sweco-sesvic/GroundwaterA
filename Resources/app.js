@@ -147,32 +147,23 @@ var tableData = [
 		}, 
 		{
 			title:'Inflow to long trench', 
-			font: {
-				fontSize: fontSize
-			},
 			hasChild: true, 
-			height: fieldHeight,			
-			color: textColor, 
+			height: 68,			
+			color: 'white', 
 			id:'21'
 		}, 
 		{
 			title:'Influence Radius by Sichardt and Weber', 
-			font: {
-				fontSize: fontSize
-			},
 			hasChild: true, 
-			height: fieldHeight,			
-			color: textColor, 
+			height: 68,			
+			color: 'white', 
 			id:'22'
 		}, 
 		{
 			title:'Inflow to tunnel', 
-			font: {
-				fontSize: fontSize
-			},
 			hasChild: true, 
-			height: fieldHeight,			
-			color: textColor, 
+			height: 68,			
+			color: 'white', 
 			id:'23'
 		}  
 	];
@@ -269,15 +260,15 @@ table.addEventListener('click', function (e) {
 	{
 		url = 'ReliabilityOfSystems.js';	
 	}
-	if (e.row.id =='20')
+	if (e.index =='20')
 	{
 		url = 'InflowToLongTrench.js';	
 	}
-	if (e.row.id =='21')
+	if (e.index =='21')
 	{
 		url = 'InfluenceRadius.js';	
 	}
-	if (e.row.id =='22')
+	if (e.index =='22')
 	{
 		url = 'InflowToTunnel.js';	
 	}
@@ -293,16 +284,16 @@ table.addEventListener('click', function (e) {
 
 //***************** SWECO LOGO ***********************
 var logoView = Titanium.UI.createView({
-		width: '100%',
-		height: 60,
-		bottom: 0,
-		backgroundColor: 'black'
-		});
+	width: '100%',
+	height: 60,
+	bottom: 0,
+	backgroundColor: 'black'
+});
 var swecoLogo = Titanium.UI.createImageView({
-		image: 'images/sweco.png',
-		height: 40,
-		bottom: 7
-	});
+	image: 'images/sweco.png',
+	height: 40,
+	bottom: 7
+});
 
 logoView.add(swecoLogo);
 win.add(logoView);
@@ -315,7 +306,6 @@ win.activity.onCreateOptionsMenu = function(e) {
  
     var aboutMenuItem = menu.add({
         title : "About",
-        //backgroundImage: '/images/info_24w.png',
     	showAsAction : Ti.Android.SHOW_AS_ACTION_IF_ROOM
     });
         
