@@ -239,15 +239,12 @@ function Calculate()
 	var val3 = parseFloat(var3.value.replace(',', '.'));
 	var val4 = parseFloat(var4.value.replace(',', '.'));
 
-	var result0 = ((1,44-1,338*Math.sqrt(val4/val2))^2);
-	
-	Ti.API.info("result0: " + result0);
-		
-	var result1 = (0,6*3000*val3*Math.sqrt(val1)-1);
-	var result2 = 1000*(2*val1*val2*val0*val3)/(result1+result0*val2);
-	
-	var resultRounded1 = Math.round(result1*10)/10;
-	var resultRounded2 = Math.round(result2*10)/10;
+	var result0 = 1.44-1.338*Math.sqrt(val4/val2);
+	var mathPow = Math.pow(result0,2);
+	var result2 = 0.6*3000*val3*Math.sqrt(val1); 
+	var resultRounded2 = Math.round(result2 / 10) * 10;
+	var result1 = 1000*(2*val1*val2*val0*val3)/(resultRounded2+mathPow*val2);
+	var resultRounded1 = Math.round(result1 * 10 ) / 10;
 	
 	if (isNaN(resultRounded1))
 	{
@@ -260,8 +257,8 @@ function Calculate()
 	}
 	else 
 	{
-		resultLbl1.text = 'Steady-state inflow (L/s): '+resultRounded2+'';
-		resultLbl2.text = 'Approximate distance of influence (m): '+resultRounded1+'';
+		resultLbl1.text = 'Steady-state inflow (L/s): '+resultRounded1+'';
+		resultLbl2.text = 'Approximate distance of influence (m): '+resultRounded2+'';
 	}
 }
 

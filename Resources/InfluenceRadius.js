@@ -217,15 +217,12 @@ function Calculate()
 	var val1 = parseFloat(var1.value.replace(',', '.'));
 	var val2 = parseFloat(var2.value.replace(',', '.'));
 
-	var result1 = 3000*val0*Math.sqrt(val1)-1;	
-	var result2 = 3*Math.sqrt(val0*val1*val2*86400/0,4)-1;  
+	var result1 = 3000*val0*Math.sqrt(val1);
+	var resultRounded1 = Math.round(result1 / 10) * 10;
+	var result2 = 3*Math.sqrt(val0*val1*val2*86400/0.4);
+	var resultRounded2 = Math.round(result2 / 10) * 10;
 	var result3 = val0*4;
-	var result4 = (result1+result2)/2;
-	
-	var resultRounded1 = Math.round(result1*10)/10;
-	var resultRounded2 = Math.round(result2*10)/10;
-	var resultRounded3 = Math.round(result3*10)/10;
-	var resultRounded4 = Math.round(result4*10)/10;
+	var result4 = (resultRounded1+resultRounded2)/2;
 	
 	if (isNaN(resultRounded1))
 	{
@@ -240,12 +237,12 @@ function Calculate()
 		resultLbl3.text = '';
 		resultLbl4.text = 'Result is null, check input fields!';
 	}
-	if (isNaN(resultRounded3))
+	if (isNaN(result3))
 	{
 		resultLbl3.text = '';
 		resultLbl4.text = 'Result is null, check input fields!';
 	}
-	if (isNaN(resultRounded4))
+	if (isNaN(result4))
 	{
 		resultLbl4.text = 'Result is null, check input fields!';
 	}
@@ -253,8 +250,8 @@ function Calculate()
 	{
 		resultLbl1.text = 'Sichardt: Approximate influence radius R(0) (m): '+resultRounded1+'';
 		resultLbl2.text = 'Weber: Approximate influence radius R(0) (m): '+resultRounded2+'';
-		resultLbl3.text = 'Approximate time to reach steady state (days):  '+resultRounded3+'';
-		resultLbl4.text = 'Approximate mean influence radius R(0) (m): '+resultRounded3+''; 
+		resultLbl3.text = 'Approximate time to reach steady state (days):  '+result3+'';
+		resultLbl4.text = 'Approximate mean influence radius R(0) (m): '+result4+''; 
 	}
 }
 
