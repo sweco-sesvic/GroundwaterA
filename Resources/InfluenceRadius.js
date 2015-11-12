@@ -224,33 +224,18 @@ function Calculate()
 	var result3 = val0*4;
 	var result4 = (resultRounded1+resultRounded2)/2;
 	
-	if (isNaN(resultRounded1))
+	if (isNaN(resultRounded1) || isNaN(resultRounded2) || isNaN(result3) || isNaN(result4))
 	{
-		resultLbl1.text = '';
+		resultLbl1.text = 'Result is null, check input fields!';
 		resultLbl2.text = '';
 		resultLbl3.text = '';
-		resultLbl4.text = 'Result is null, check input fields!';
-	}
-	if (isNaN(resultRounded2))
-	{
-		resultLbl2.text = '';
-		resultLbl3.text = '';
-		resultLbl4.text = 'Result is null, check input fields!';
-	}
-	if (isNaN(result3))
-	{
-		resultLbl3.text = '';
-		resultLbl4.text = 'Result is null, check input fields!';
-	}
-	if (isNaN(result4))
-	{
-		resultLbl4.text = 'Result is null, check input fields!';
+		resultLbl4.text = '';
 	}
 	else 
 	{
 		resultLbl1.text = 'Sichardt: Approximate influence radius R(0) (m): '+resultRounded1+'';
 		resultLbl2.text = 'Weber: Approximate influence radius R(0) (m): '+resultRounded2+'';
-		resultLbl3.text = 'Approximate time to reach steady state (days):  '+result3+'';
+		resultLbl3.text = 'Approximate time to reach steady state (days): '+result3+'';
 		resultLbl4.text = 'Approximate mean influence radius R(0) (m): '+result4+''; 
 	}
 }
@@ -269,10 +254,10 @@ win.activity.onCreateOptionsMenu = function(e) {
         
 	aboutMenuItem.addEventListener("click", function(e) {
         var aboutWindow = Titanium.UI.createWindow({
-        	title: 'Inflow to excavation',
+        	title: 'Influence Radius by Sichardt and Weber',
         	url: 'DetailDescription.js',
         	lblText: 'Sichardt and Weber present two formulas to quickly estimate the size of the influence radius R(0) from a production well with a drawdown.' 
-					+ '\nThe formulas are however not their prime interest work, but mere an intermediate steps to calculate drawdown in a well. The Sichardt (<-ska vara understruket) formula is: R(0) ≈ 3000·s·√K'
+					+ '\nThe formulas are however not their prime interest work, but mere an intermediate steps to calculate drawdown in a well. The Sichardt formula is: R(0) ≈ 3000·s·√K'
 					+ '\n\nThe formula does not directly account for groundwater recharge, but indirectly do so by including the hydraulic conductivity K.'
 					+ '\nIt is valid for unconfined conditions. For high K-values, the formula may underestimate the influence radius. If not the drawdown is from a single well,' 
 					+ 'but from a line of wells, R(0) is about 50-70 % of the result. The result is presented as powers of 10 meters, which still may be incorrect.'

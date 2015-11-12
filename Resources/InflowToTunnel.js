@@ -309,20 +309,11 @@ function Calculate()
 	var result3 = resultRounded2/resultRounded1;
 	var resultRounded3 = Math.round(result3*100);
 	
-	if (isNaN(resultRounded1))
+	if (isNaN(resultRounded1) || isNaN(resultRounded2) || isNaN(resultRounded3))
 	{
-		resultLbl1.text = '';
+		resultLbl1.text = 'Result is null, check input fields!';
 		resultLbl2.text = '';
-		resultLbl3.text = 'Result is null, check input fields!';
-	}
-	if (isNaN(resultRounded2))
-	{
-		resultLbl2.text = '';
-		resultLbl3.text = 'Result is null, check input fields!';
-	}
-	if (isNaN(resultRounded3))
-	{
-		resultLbl3.text = 'Result is null, check input fields!';
+		resultLbl3.text = '';
 	}
 	else 
 	{
@@ -346,7 +337,7 @@ win.activity.onCreateOptionsMenu = function(e) {
         
 	aboutMenuItem.addEventListener("click", function(e) {
         var aboutWindow = Titanium.UI.createWindow({
-        	title: 'Inflow to excavation',
+        	title: 'Steady state inflow to tunnel',
         	url: 'DetailDescription.js',
         	lblText: 'Gustafson presents a formula, amongst others, based Thiem, of inflow to a tunnel, with and without sealing. '
         		+ 'The inflow calculation refers to steady-state conditions. The tunnel is assumed long and rock is homogenous and permeability is isotropic (rarely the case).'

@@ -17,7 +17,7 @@ var descRow = Titanium.UI.createView({
 });
 
 var descLabel = Titanium.UI.createLabel({
-	text: "Reliability is the probability of success, or the ability for a system to perform is intended function.",
+	text: "Reliability is the probability of success, or the ability for a system to perform its intended function.",
 	font:{fontSize:14,fontFamily:'Helvetica Neue'},
 	color: textColor,
 	left: 5
@@ -212,7 +212,7 @@ win.activity.onCreateOptionsMenu = function(e) {
         var aboutWindow = Titanium.UI.createWindow({
         	title: 'Reliability of systems',
         	url: 'DetailDescription.js',
-        	lblText: 'Reliability is the probability of success, or the ability for a system to perform is intended function. \nComponents are in series or in parallell. System reliability can be uesed to dermine the degree of redundancy required to achieve a desired level of system reliability (Harr, 1987), for instance in the design of tunnel sealing concepts (one or two barriers). A common two-component system is calulated. A series system is a system with the components in a row after each other. A parallell system is a system with the components beside each other. \nThe low probability of failure for the parallell model is a consequence of the redundancy of the components. That system will fail only when all of its components fail. For a series model, the system will fail when any of its components fail. \nTherefor, a two barriers system in parallell with only moderate reliabilities, can be more reliable than one barrier with a high reliability, depending on the reliabilities of the two components. Some systems have both parallell and series components. That system has a reliability inbetween the parrallell and the series system reliability. \nSee, for instance: \nHarr \nReliability-Based Design in Civil Engineering, McGraw- \nHill, 1987.'
+        	lblText: 'Reliability is the probability of success, or the ability for a system to perform its intended function. \nComponents are in series or in parallell. System reliability can be uesed to dermine the degree of redundancy required to achieve a desired level of system reliability (Harr, 1987), for instance in the design of tunnel sealing concepts (one or two barriers). A common two-component system is calulated. A series system is a system with the components in a row after each other. A parallell system is a system with the components beside each other. \nThe low probability of failure for the parallell model is a consequence of the redundancy of the components. That system will fail only when all of its components fail. For a series model, the system will fail when any of its components fail. \nTherefor, a two barriers system in parallell with only moderate reliabilities, can be more reliable than one barrier with a high reliability, depending on the reliabilities of the two components. Some systems have both parallell and series components. That system has a reliability inbetween the parrallell and the series system reliability. \nSee, for instance: \nHarr \nReliability-Based Design in Civil Engineering, McGraw- \nHill, 1987.'
 		});
      		
     	aboutWindow.open();

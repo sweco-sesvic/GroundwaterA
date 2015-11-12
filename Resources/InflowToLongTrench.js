@@ -246,14 +246,10 @@ function Calculate()
 	var result1 = 1000*(2*val1*val2*val0*val3)/(resultRounded2+mathPow*val2);
 	var resultRounded1 = Math.round(result1 * 10 ) / 10;
 	
-	if (isNaN(resultRounded1))
+	if (isNaN(resultRounded1) || isNaN(resultRounded2))
 	{
-		resultLbl1.text = '';
-		resultLbl2.text = 'Result is null, check input fields!';
-	}
-	if (isNaN(resultRounded2))
-	{
-		resultLbl2.text = 'Result is null, check input fields!';
+		resultLbl1.text = 'Result is null, check input fields!';
+		resultLbl2.text = '';
 	}
 	else 
 	{
@@ -276,7 +272,7 @@ win.activity.onCreateOptionsMenu = function(e) {
         
 	aboutMenuItem.addEventListener("click", function(e) {
         var aboutWindow = Titanium.UI.createWindow({
-        	title: 'Inflow to excavation',
+        	title: 'Inflow to long trench',
         	url: 'DetailDescription.js',
         	lblText: 'A partially penetrating long trench down to a confined aquifer receives water from both sides of the trench.'
         		+ '\n\nThe formula is in essence Darcy´s law or Q=2·T·i·B, where T=K·D, B=B and i ≈ s/L, flow from two sides.'
