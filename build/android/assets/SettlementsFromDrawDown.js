@@ -1,1 +1,0 @@
-/Users/sesvic/GroundwaterAndroid/Resources/SettlementsFromDrawDown.js
