@@ -4,11 +4,19 @@
 // this sets the background color of the master UIView (when there are no windows/tab groups on it)
 
 Titanium.UI.setBackgroundColor('#000');
-var win = Titanium.UI.currentWindow;
-win.backgroundImage = 'images/bgGradient.png';
+var currwin = Titanium.UI.currentWindow;
+currwin.backgroundImage = 'images/bgGradient.png';
 var textColor ='#FFF';
 var rowHeight = 40;
 var rows = [];
+
+var win = Titanium.UI.createScrollView({
+	top:0,
+	showVerticalScrollIndicator:true,
+	showHorizontalScrollIndicator:false,
+	scrollType: 'vertical',
+	layout: 'vertical'
+});
 
 
 //****DESCRIPTION LABEL*****
@@ -227,7 +235,7 @@ function Calculate()
 
 //***************** ABOUT WINDOW ***********************
 
-win.activity.onCreateOptionsMenu = function(e) {
+currwin.activity.onCreateOptionsMenu = function(e) {
     var menu = e.menu;
  
     var aboutMenuItem = menu.add({
@@ -249,3 +257,4 @@ win.activity.onCreateOptionsMenu = function(e) {
 
 //****************************************************
 
+currwin.add(win);

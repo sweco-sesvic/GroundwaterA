@@ -3,11 +3,19 @@
 /// <reference path="jquery-1.4.1-vsdoc" />
 // this sets the background color of the master UIView (when there are no windows/tab groups on it)
 Titanium.UI.setBackgroundColor('#000');
-var win = Titanium.UI.currentWindow;
-win.backgroundImage = 'images/bgGradient.png';
-win.navTintColor = '#B5CCEF';
+var currwin = Titanium.UI.currentWindow;
+currwin.backgroundImage = 'images/bgGradient.png';
+currwin.navTintColor = '#B5CCEF';
 var textColor ='#FFF';
 var rowHeight = Ti.UI.SIZE;
+
+var win = Titanium.UI.createScrollView({
+	top:0,
+	showVerticalScrollIndicator:true,
+	showHorizontalScrollIndicator:false,
+	scrollType: 'vertical',
+	layout: 'vertical'
+});
 
 
 //****DESCRIPTION LABEL****
@@ -296,15 +304,15 @@ function Calculate()
 	var val0 = parseFloat(var0.value.replace(',', '.'));
 	var val1 = parseFloat(var1.value.replace(',', '.'));
 	var val2 = parseFloat(var2.value.replace(',', '.'));
-	var val3 = parseFloat(var2.value.replace(',', '.'));
-	var val4 = parseFloat(var2.value.replace(',', '.'));
-	var val5 = parseFloat(var2.value.replace(',', '.'));
+	var val3 = parseFloat(var3.value.replace(',', '.'));
+	var val4 = parseFloat(var4.value.replace(',', '.'));
+	var val5 = parseFloat(var5.value.replace(',', '.'));
 
 	var result1 = 1000*60*100*(2*Math.PI*val0*val1)/(Math.log(2*val1/val2)+val3);	
-	var result2 = (1000*60*100*(2*Math.PI*val0*val1))/((Math.log(2*val1/val2)+((val0/val3)-1))*((Math.log(1+(val5/val2)))+val3));  
+	var result2 = 1000*60*100*(2*Math.PI*val0*val1)/(Math.log(2*val1/val2)+((val0/val4)-1)*(Math.log(1+(val5/val2)))+val3);  
 	
 	var resultRounded1 = Math.ceil(result1);
-	var resultRounded2 = Math.floor(result2/10);
+	var resultRounded2 = Math.round(result2);
 	
 	var result3 = resultRounded2/resultRounded1;
 	var resultRounded3 = Math.round(result3*100);
@@ -326,7 +334,7 @@ function Calculate()
 
 //***************** ABOUT WINDOW ***********************
 
-win.activity.onCreateOptionsMenu = function(e) {
+currwin.activity.onCreateOptionsMenu = function(e) {
     var menu = e.menu;
  
     var aboutMenuItem = menu.add({
@@ -360,3 +368,6 @@ win.activity.onCreateOptionsMenu = function(e) {
 };
 
 //****************************************************
+
+currwin.add(win);
+
