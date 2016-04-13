@@ -252,7 +252,7 @@ function Calculate()
 
 
 	var result1 = (val1*val2)*1000/(31500000);	
-	var result2 = val4*val3*val5;
+	var result2 = val4*val3*val5*1000;
 	var result3 = (0.1666*result1)+(0.6666*(result1+result2)/2)+(0.1666*result2);
 	
 	var resultRounded1 = Math.round(result1*10)/10;
